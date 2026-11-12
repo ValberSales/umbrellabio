@@ -1,0 +1,17 @@
+services:
+  umbrella-4ps-portal:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: umbrella-ogg-4ps
+    ports:
+      - "8088:80"
+    restart: unless-stopped
+
+  cloudflare-tunnel:
+    image: cloudflare/cloudflared:latest
+    container_name: umbrella-cf-tunnel
+    command: tunnel --no-autoupdate --url http://umbrella-4ps-portal:80
+    depends_on:
+      - umbrella-4ps-portal
+    restart: unless-stopped

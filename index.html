@@ -1,0 +1,1705 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>UMBRELLA CORPORATION // Briefing Executivo ao Board — Divisão de Biocombustíveis</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <!-- Scroll-Driven Top Progress Laser -->
+  <div class="scroll-laser-track" aria-hidden="true">
+    <div class="scroll-laser-bar" id="scrollLaserBar"></div>
+  </div>
+
+  <!-- Interactive Ambient Bio-Grid Canvas -->
+  <canvas id="bioCanvas" aria-hidden="true"></canvas>
+
+  <!-- Red Queen Security Clearance Strip -->
+  <div class="clearance-strip">
+    <div class="clearance-inner">
+      <div class="clearance-group">
+        <span><span class="status-dot"></span> RED QUEEN NEURAL CORE v4.6</span>
+        <span class="clearance-tag">CLEARANCE: OMEGA BOARDROOM</span>
+        <span>UNIDADE: COMPLEXO A COLMEIA (SETOR 4)</span>
+      </div>
+      <div class="clearance-group">
+        <span>DIVISÃO DE BIOCOMBUSTÍVEIS SINTÉTICOS</span>
+        <span><span class="status-dot emerald"></span> CICLOS P1–P5 AUDITADOS • PLANO P6 ATIVO</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Apple ProLED XDR Style Sticky Navigation -->
+  <header class="apple-sticky-nav" id="stickyNav">
+    <div class="nav-container">
+      <a href="#top" class="brand-cluster">
+        <svg class="umbrella-octagon-svg" viewBox="0 0 100 100" aria-label="Umbrella Corporation Emblem">
+          <polygon points="30,4 70,4 96,30 96,70 70,96 30,96 4,70 4,30" fill="#07070b" stroke="#e1112c" stroke-width="3"/>
+          <polygon points="50,50 32,8 68,8" fill="#e1112c"/>
+          <polygon points="50,50 68,8 92,32" fill="#f8fafc"/>
+          <polygon points="50,50 92,32 92,68" fill="#e1112c"/>
+          <polygon points="50,50 92,68 68,92" fill="#f8fafc"/>
+          <polygon points="50,50 68,92 32,92" fill="#e1112c"/>
+          <polygon points="50,50 32,92 8,68" fill="#f8fafc"/>
+          <polygon points="50,50 8,68 8,32" fill="#e1112c"/>
+          <polygon points="50,50 8,32 32,8" fill="#f8fafc"/>
+          <circle cx="50" cy="50" r="8" fill="#07070b" stroke="#e1112c" stroke-width="2"/>
+        </svg>
+        <div class="brand-titles">
+          <span class="brand-name">UMBRELLA CORPORATION</span>
+          <span class="brand-sub">DIVISÃO DE BIOCOMBUSTÍVEIS // BOARD BRIEFING</span>
+        </div>
+      </a>
+      <nav aria-label="Navegação do Conselho">
+        <ul class="nav-links" id="navLinks">
+          <li><a href="#resumo" class="active">01. Visão Geral</a></li>
+          <li><a href="#produto">02. Produto</a></li>
+          <li><a href="#preco">03. Preço</a></li>
+          <li><a href="#praca">04. Praça</a></li>
+          <li><a href="#promocao">05. Promoção</a></li>
+          <li><a href="#sinergia">06. Matriz 4 Ps</a></li>
+          <li><a href="#simulador-p6">07. Plano P6</a></li>
+          <li><a href="#contabil">08. Demonstrativos</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="top">
+    <!-- =====================================================================
+         HERO STAGE (Apple ProLED XDR Display Style + Umbrella Bio-Reactor)
+         ===================================================================== -->
+    <section class="hero-stage">
+      <div class="hero-eyebrow reveal-on-scroll">
+        <span>PROTOCOLO T-FUEL™</span>
+        <span>•</span>
+        <span>RELATÓRIO AO CONSELHO DE ADMINISTRAÇÃO</span>
+        <span>•</span>
+        <span>DIVISÃO DE BIOCOMBUSTÍVEIS</span>
+      </div>
+
+      <h1 class="hero-headline reveal-on-scroll">
+        Pura Biotecnologia.<br />
+        <span class="crimson-glow">Margem Letal.</span>
+        <span class="emerald-glow">Domínio Absoluto.</span>
+      </h1>
+
+      <p class="hero-lead reveal-on-scroll">
+        Senhores Conselheiros: em cinco ciclos operacionais, transformamos o Complexo da Região 4 em uma máquina
+        de geração de caixa com <strong>73,1% de margem bruta</strong>, <strong>dívida zero</strong> e
+        <strong>R$ 20,47 milhões em liquidez imediata</strong>. Este é o balanço estratégico dos nossos 4 Ps.
+      </p>
+
+      <!-- Apple-style Hardware Showcase with Telemetry HUD Callouts -->
+      <div class="reactor-showcase reveal-on-scroll">
+        <div class="reactor-image-frame">
+          <img src="assets/umbrella-reactor-hero.jpg" alt="Cápsula de Síntese T-Fuel da Umbrella Corporation" />
+        </div>
+
+        <div class="hud-callout top-left">
+          <span class="hud-label">LUCRO LÍQUIDO P5 (100% ORGÂNICO)</span>
+          <span class="hud-val">R$ 11,95 mi</span>
+          <span class="hud-sub">Lucro Acumulado: R$ 19,51 milhões</span>
+        </div>
+
+        <div class="hud-callout bottom-left emerald-border">
+          <span class="hud-label">MARGEM BRUTA &amp; RETORNO (P5)</span>
+          <span class="hud-val">73,1% • ROA 40,5%</span>
+          <span class="hud-sub">R$ 19,56 de lucro bruto por unidade</span>
+        </div>
+
+        <div class="hud-callout top-right cyan-border">
+          <span class="hud-label">BIOTECNOLOGIA ARKLAY</span>
+          <span class="hud-val">Grau 2 • 90,0% Ef.</span>
+          <span class="hud-sub">810.000 un extraídas da Usina 1</span>
+        </div>
+
+        <div class="hud-callout bottom-right amber-border">
+          <span class="hud-label">COFRE CENTRAL (CAIXA P5)</span>
+          <span class="hud-val">R$ 20,47 mi</span>
+          <span class="hud-sub">Zero empréstimos • Zero juros • Zero multas</span>
+        </div>
+      </div>
+
+      <!-- 4 Ps Executive Summary Bento Cards -->
+      <div class="hero-4ps-grid">
+        <article class="p-summary-card p-produto reveal-on-scroll">
+          <div class="p-tag">
+            <span>01 // PRODUTO</span>
+            <span>LABORATÓRIOS ARKLAY</span>
+          </div>
+          <div class="p-card-metric">Grau 2 • 90%</div>
+          <h2 class="p-card-title">Síntese 2:2:1 &amp; Pureza</h2>
+          <p class="p-card-desc">
+            Atingimos o <strong>Grau de Inovação 2</strong> no P4 após R$ 7,50 mi acumulados em P&amp;D e migramos para embalagem Premium.
+            Produtividade chegou a <strong>90,0%</strong>, mas entrou em zona de retornos decrescentes (+0,25 pt no P5).
+          </p>
+        </article>
+
+        <article class="p-summary-card p-preco reveal-on-scroll">
+          <div class="p-tag">
+            <span>02 // PREÇO</span>
+            <span>PODER DE PRECIFICAÇÃO</span>
+          </div>
+          <div class="p-card-metric">R$ 26,76/un</div>
+          <h2 class="p-card-title">+125% no Preço • 73,1% Margem</h2>
+          <p class="p-card-desc">
+            Elevamos o preço médio de <strong>R$ 11,90 (P3) para R$ 26,76 (P5)</strong> enquanto o volume vendido saltou +140%.
+            Os insumos subiram 74% (para R$ 2,79/un), mas nosso preço subiu muito mais que o custo.
+          </p>
+        </article>
+
+        <article class="p-summary-card p-praca reveal-on-scroll">
+          <div class="p-tag">
+            <span>03 // PRAÇA</span>
+            <span>COMPLEXO A COLMEIA</span>
+          </div>
+          <div class="p-card-metric">900k → 1,8M</div>
+          <h2 class="p-card-title">Teto em P5 e Duplicação no P6</h2>
+          <p class="p-card-desc">
+            Em P5 nossa única usina ativa operou no limite (<strong>900k nominal → 810k real</strong>) para atender <strong>1,07 milhão</strong> em vendas.
+            A 2ª usina comprada no P5 entra em operação no P6, dobrando a capacidade para <strong>1,80 milhão</strong>.
+          </p>
+        </article>
+
+        <article class="p-summary-card p-promocao reveal-on-scroll">
+          <div class="p-tag">
+            <span>04 // PROMOÇÃO</span>
+            <span>DOMÍNIO COMERCIAL</span>
+          </div>
+          <div class="p-card-metric">R$ 5,53 mi</div>
+          <h2 class="p-card-title">Força da Marca vs. Excesso de Otimismo</h2>
+          <p class="p-card-desc">
+            R$ 5,53 mi em propaganda e R$ 320 mil em blindagem ESG sustentaram a demanda, mas o plano comercial superestimou o mercado em
+            <strong>44% no P5</strong> (1,54M planejado vs 1,07M vendido).
+          </p>
+        </article>
+      </div>
+    </section>
+
+    <div class="section-divider"></div>
+
+    <!-- =====================================================================
+         SECTION 01: VISÃO EXECUTIVA & TRAJETÓRIA P1 A P5
+         ===================================================================== -->
+    <section class="section-shell" id="resumo">
+      <div class="section-header reveal-on-scroll">
+        <span class="section-kicker">01 // BALANÇO AO BOARD DE RACCOON CITY (CICLOS P1 A P5)</span>
+        <h2 class="section-title">De Fase de Implantação a R$ 14,06 Milhões de Lucro Operacional Puro.</h2>
+        <p class="section-subtitle">
+          Saímos do investimento pesado de fundação nos ciclos P1 e P2 para um lucro líquido de <strong>R$ 11,95 milhões no P5</strong>,
+          sem nunca tomar um centavo de empréstimo bancário e mantendo solvência blindada durante toda a operação.
+        </p>
+      </div>
+
+      <!-- Red Queen Callout 01 -->
+      <div class="red-queen-box reveal-on-scroll">
+        <div class="rq-avatar">RQ</div>
+        <div class="rq-content">
+          <div class="rq-header">RED QUEEN // TELEMETRIA DE SOLVÊNCIA CORPORATIVA</div>
+          <p class="rq-text">
+            "As projeções da Red Queen confirmam: mesmo sem os aportes governamentais de contenção recebidos em P3 e P4 (R$ 12,00 mi totais),
+            o <strong>Resultado Operacional Puro (LAIR) atingiu R$ 14,06 milhões no P5</strong>. Nosso patrimônio líquido já triplicou o capital inicial dos acionistas (<strong>R$ 29,51 milhões</strong>)."
+          </p>
+        </div>
+      </div>
+
+      <!-- Animated Chart 01: Financial Trajectory P1-P5 -->
+      <div class="chart-panel reveal-on-scroll" id="chartFinTrajectory">
+        <div class="chart-header">
+          <div class="chart-title-group">
+            <h3>Gráfico 01 — Escalada Financeira: Receita, Lucro Bruto, Lucro Líquido e Caixa (P1 a P5)</h3>
+            <p>Em R$ milhões • A operação autofinanciou 100% da expansão tecnológica e industrial</p>
+          </div>
+          <div class="chart-legend">
+            <span class="legend-item"><span class="legend-swatch" style="background:#e1112c"></span>Receita de Vendas</span>
+            <span class="legend-item"><span class="legend-swatch" style="background:#34d399"></span>Lucro Bruto</span>
+            <span class="legend-item"><span class="legend-swatch" style="background:#00e5ff"></span>Lucro Líquido</span>
+            <span class="legend-item"><span class="legend-swatch" style="background:#f59e0b"></span>Caixa em Cofre (Linha)</span>
+          </div>
+        </div>
+        <div class="svg-chart-stage" id="svgStageFinancial"></div>
+      </div>
+
+      <!-- Master Indicator Table (Concise & Clean) -->
+      <div class="bento-card reveal-on-scroll">
+        <div class="bento-eyebrow">
+          <span>PAINEL EXECUTIVO DE INDICADORES (P1 A P5 + EXPANSÃO P6)</span>
+          <span class="badge-pill info">TELEMETRIA RED QUEEN</span>
+        </div>
+        <div class="table-scroll-wrapper">
+          <table class="umbrella-table">
+            <thead>
+              <tr>
+                <th>Indicador Corporativo</th>
+                <th class="num-col">P1</th>
+                <th class="num-col">P2</th>
+                <th class="num-col">P3</th>
+                <th class="num-col">P4</th>
+                <th class="num-col">P5</th>
+                <th class="num-col">Ciclo P6 (Ativo)</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="crimson-row">
+                <td><strong>Capacidade Nominal Operacional (un)</strong></td>
+                <td class="num-col">0 (instalando)</td>
+                <td class="num-col">900.000</td>
+                <td class="num-col">900.000</td>
+                <td class="num-col">900.000</td>
+                <td class="num-col"><strong>900.000</strong></td>
+                <td class="num-col"><strong>1.800.000 (2 Usinas)</strong></td>
+              </tr>
+              <tr>
+                <td><strong>Quantidade Produzida (un)</strong></td>
+                <td class="num-col">0</td>
+                <td class="num-col">499.163</td>
+                <td class="num-col">796.500</td>
+                <td class="num-col">807.750</td>
+                <td class="num-col"><strong>810.000</strong></td>
+                <td class="num-col">1.800.000 (prog.)</td>
+              </tr>
+              <tr>
+                <td><strong>Quantidade Vendida (un)</strong></td>
+                <td class="num-col">0</td>
+                <td class="num-col">0</td>
+                <td class="num-col">445.348</td>
+                <td class="num-col">1.020.773</td>
+                <td class="num-col"><strong>1.067.450</strong></td>
+                <td class="num-col">2.079.842 (meta)</td>
+              </tr>
+              <tr class="highlight-row">
+                <td><strong>Receita de Vendas (R$ mi)</strong></td>
+                <td class="num-col">0,00</td>
+                <td class="num-col">0,00</td>
+                <td class="num-col">5,30</td>
+                <td class="num-col">21,82</td>
+                <td class="num-col"><strong>28,57</strong></td>
+                <td class="num-col">61,22 (meta)</td>
+              </tr>
+              <tr>
+                <td><strong>Preço Médio (R$/un) &amp; Margem Bruta</strong></td>
+                <td class="num-col">–</td>
+                <td class="num-col">–</td>
+                <td class="num-col">R$ 11,90 (65,8%)</td>
+                <td class="num-col">R$ 21,37 (69,8%)</td>
+                <td class="num-col"><strong>R$ 26,76 (73,1%)</strong></td>
+                <td class="num-col">R$ 29,43 (&gt;74%)</td>
+              </tr>
+              <tr>
+                <td><strong>Estoque Final de Produto Acabado (un)</strong></td>
+                <td class="num-col">0</td>
+                <td class="num-col">499.163</td>
+                <td class="num-col">850.315</td>
+                <td class="num-col">637.292</td>
+                <td class="num-col"><strong>379.842</strong></td>
+                <td class="num-col">Giro Pleno</td>
+              </tr>
+              <tr>
+                <td><strong>Estoque de Matéria-Prima (R$ mi)</strong></td>
+                <td class="num-col">1,20</td>
+                <td class="num-col">1,87</td>
+                <td class="num-col">2,35</td>
+                <td class="num-col">5,04</td>
+                <td class="num-col"><strong>5,71</strong></td>
+                <td class="num-col">+R$ 9,33 mi lote P7</td>
+              </tr>
+              <tr>
+                <td><strong>P&amp;D no Ciclo (R$ mi) &amp; Grau de Inovação</strong></td>
+                <td class="num-col">1,35 (Grau 1)</td>
+                <td class="num-col">1,05 (Grau 1)</td>
+                <td class="num-col">1,50 (Grau 1)</td>
+                <td class="num-col">2,70 (<strong>Grau 2</strong>)</td>
+                <td class="num-col"><strong>0,90 (Grau 2)</strong></td>
+                <td class="num-col">2,40 (Alvo Grau 3)</td>
+              </tr>
+              <tr>
+                <td><strong>Produtividade Industrial (%)</strong></td>
+                <td class="num-col">84,50%</td>
+                <td class="num-col">87,00%</td>
+                <td class="num-col">88,50%</td>
+                <td class="num-col">89,75%</td>
+                <td class="num-col"><strong>90,00%</strong></td>
+                <td class="num-col">&gt; 91,0%</td>
+              </tr>
+              <tr class="highlight-row">
+                <td><strong>Lucro Líquido (R$ mi) / Caixa Final (R$ mi)</strong></td>
+                <td class="num-col">-2,17 / 5,13</td>
+                <td class="num-col">-2,79 / 1,44</td>
+                <td class="num-col">0,06 / 1,27</td>
+                <td class="num-col">12,46 / 10,50</td>
+                <td class="num-col"><strong>11,95 / 20,47</strong></td>
+                <td class="num-col">&gt;20,0 / &gt;48,0</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <!-- Scenario Timeline P1-P5 (In-Universe Lore) -->
+        <div class="scenario-timeline">
+          <div class="timeline-step">
+            <div class="timeline-period">CICLO P01 // FUNDAÇÃO</div>
+            <div class="timeline-title">Abertura da Colmeia (R4)</div>
+            <p class="timeline-desc">
+              Aquisição da Usina 1 (R$ 1,50 mi, operacional no P2), lote inicial de insumos (R$ 1,20 mi) e partida dos Laboratórios Arklay (R$ 1,35 mi em P&amp;D).
+            </p>
+          </div>
+          <div class="timeline-step">
+            <div class="timeline-period">CICLO P02 // SÍNTESE</div>
+            <div class="timeline-title">Primeiro Lote (499k un)</div>
+            <p class="timeline-desc">
+              Usina 1 entra em operação (900k nominal). Produzimos 499.163 un (produtividade de 87,0%) e formamos nosso estoque estratégico na Região 4.
+            </p>
+          </div>
+          <div class="timeline-step">
+            <div class="timeline-period">CICLO P03 // SURTO VIRAL</div>
+            <div class="timeline-title">Ervas Verdes &amp; Embalagem Premium</div>
+            <p class="timeline-desc">
+              Crise sanitária e greve no país. Distribuímos Plano Médico e +30% salarial (zero multa), lançamos a Embalagem Premium e vendemos 445.348 un.
+            </p>
+          </div>
+          <div class="timeline-step p4">
+            <div class="timeline-period">CICLO P04 // GRAU 2</div>
+            <div class="timeline-title">Salto Genético &amp; Explosão Comercial</div>
+            <p class="timeline-desc">
+              Com R$ 6,60 mi acumulados em P&amp;D, atingimos o <strong>Grau de Inovação 2</strong>. Preço salta +80% (R$ 21,37) e vendas dobram para 1,02 milhão de unidades.
+            </p>
+          </div>
+          <div class="timeline-step p5">
+            <div class="timeline-period">CICLO P05 // USINA GÊMEA</div>
+            <div class="timeline-title">Teto da Usina 1 &amp; Compra da Usina 2</div>
+            <p class="timeline-desc">
+              Usina 1 opera no teto (810k un) contra 1,07 milhão vendidos @ R$ 26,76. Compramos e contratamos a equipe da Usina 2 para dobrar a produção para <strong>1,80 milhão no P6</strong>.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="section-divider"></div>
+
+    <!-- =====================================================================
+         SECTION 02: 1º P — PRODUTO (LABORATÓRIOS ARKLAY & FÓRMULA 2:2:1)
+         ===================================================================== -->
+    <section class="section-shell" id="produto">
+      <div class="section-header reveal-on-scroll">
+        <span class="section-kicker">02 // PRIMEIRO PILAR: PRODUTO</span>
+        <h2 class="section-title">Biotecnologia Grau 2, Teto de Eficiência e a Fórmula Molecular 2:2:1.</h2>
+        <p class="section-subtitle">
+          Não vendemos óleo básico: entregamos performance energética certificada. Nosso composto apoia-se em
+          <strong>R$ 7,50 milhões investidos em P&amp;D</strong>, <strong>Embalagem Premium</strong> e na síntese estequiométrica
+          de três matérias-primas.
+        </p>
+      </div>
+
+      <div class="bento-grid-2">
+        <div class="bento-card crimson-accent reveal-on-scroll">
+          <div class="bento-eyebrow">
+            <span>LABORATÓRIOS ARKLAY // P&amp;D</span>
+            <span class="badge-pill pos">GRAU DE INOVAÇÃO 2</span>
+          </div>
+          <div class="bento-big-number crimson">R$ 7,50 mi</div>
+          <h3 class="bento-title">Patamar Acumulado de Inovação</h3>
+          <p class="bento-body">
+            O investimento em P&amp;D representou <strong>34,4% das despesas operacionais</strong> e <strong>13,5% da receita acumulada</strong>.
+            Rompemos a barreira do <strong>Grau 2 no P4</strong> ao atingir R$ 6,60 mi acumulados (aporte de R$ 2,70 mi na rodada).
+          </p>
+          <div class="metric-strip-list">
+            <div class="metric-strip-item">
+              <span class="label">Manutenção Tecnológica no P5</span>
+              <span class="val">R$ 0,90 mi (manteve Grau 2)</span>
+            </div>
+            <div class="metric-strip-item">
+              <span class="label">Padrão de Contenção (Embalagem desde P3)</span>
+              <span class="val">Premium (R$ 1,30 / un)</span>
+            </div>
+            <div class="metric-strip-item">
+              <span class="label">Ofensiva P6 (Rumo ao Grau 3)</span>
+              <span class="val">+R$ 2,40 mi (Acum. R$ 9,90 mi)</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="bento-card emerald-accent reveal-on-scroll">
+          <div class="bento-eyebrow">
+            <span>EFICIÊNCIA DOS BIORREATORES</span>
+            <span class="badge-pill warn">RETORNOS DECRESCENTES</span>
+          </div>
+          <div class="bento-big-number emerald">84,5% → 90,0%</div>
+          <h3 class="bento-title">A Desaceleração da Curva de Produtividade</h3>
+          <p class="bento-body">
+            A produtividade garantiu <strong>810.000 unidades reais</strong> na Usina 1 em P5 (90,0% sobre 900.000 nominais).
+            Porém, cada ponto extra está custando mais caro em P&amp;D e treinamento:
+          </p>
+          <div class="metric-strip-list">
+            <div class="metric-strip-item">
+              <span class="label">Salto Inicial (P1 → P2 → P3)</span>
+              <span class="val">+2,50 pts (P2) e +1,50 pt (P3)</span>
+            </div>
+            <div class="metric-strip-item">
+              <span class="label">Consolidação (P3 → P4)</span>
+              <span class="val">+1,25 pt (89,75%)</span>
+            </div>
+            <div class="metric-strip-item">
+              <span class="label">Saturação Marginal (P4 → P5)</span>
+              <span class="val" style="color:var(--bio-amber);">Apenas +0,25 pt (90,00%)</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Animated Charts 02 & 03 Side by Side -->
+      <div class="bento-grid-2">
+        <div class="chart-panel reveal-on-scroll" id="chartPnD">
+          <div class="chart-header">
+            <div class="chart-title-group">
+              <h3>Gráfico 02 — Investimento em P&amp;D (Anual vs. Acumulado)</h3>
+              <p>O salto para R$ 6,60 mi acumulados no P4 destravou o Grau 2; P6 eleva a R$ 9,90 mi</p>
+            </div>
+            <div class="chart-legend">
+              <span class="legend-item"><span class="legend-swatch" style="background:#e1112c"></span>P&amp;D no Ciclo (R$ mi)</span>
+              <span class="legend-item"><span class="legend-swatch" style="background:#00e5ff"></span>P&amp;D Acumulado (R$ mi)</span>
+            </div>
+          </div>
+          <div class="svg-chart-stage" id="svgStagePnD"></div>
+        </div>
+
+        <div class="chart-panel reveal-on-scroll" id="chartProductivity">
+          <div class="chart-header">
+            <div class="chart-title-group">
+              <h3>Gráfico 03 — Produtividade Total (%) vs. Ganho Marginal por Ciclo</h3>
+              <p>Queda do ganho marginal de +2,50 pts (P2) para +0,25 pt (P5) exige cautela nos aportes</p>
+            </div>
+            <div class="chart-legend">
+              <span class="legend-item"><span class="legend-swatch" style="background:#34d399"></span>Produtividade Total (%)</span>
+              <span class="legend-item"><span class="legend-swatch" style="background:#f59e0b"></span>Ganho Marginal (+pts)</span>
+            </div>
+          </div>
+          <div class="svg-chart-stage" id="svgStageProductivity"></div>
+        </div>
+      </div>
+
+      <!-- Raw Material 2:2:1 Molecular Synthesis -->
+      <div class="bento-card reveal-on-scroll">
+        <div class="bento-eyebrow">
+          <span>ESTEQUIOMETRIA INDUSTRIAL // SÍNTESE T-FUEL™</span>
+          <span class="badge-pill info">PROPORÇÃO 2 : 2 : 1</span>
+        </div>
+        <h3 class="bento-title">Anatomia dos Insumos (P2 a P5) e o Risco do Catalisador MP3</h3>
+        <p class="bento-body">
+          Cada unidade produzida consome exatamente <strong>2 partes de MP1</strong>, <strong>2 partes de MP2</strong> e <strong>1 parte de MP3</strong>.
+          Entre P2 e P5, o custo de matéria-prima aplicada por unidade subiu <strong>+74%</strong> (de R$ 1,59 para <strong>R$ 2,79/un</strong>):
+        </p>
+
+        <div class="formula-stage">
+          <div class="molecule-box mp1">
+            <div class="molecule-ratio">2 × MP1</div>
+            <strong>Sementes Progenitor</strong>
+            <p class="bento-body" style="font-size:0.8rem;margin-top:6px;">
+              R$ 0,20 → <strong>R$ 0,30 (+50%)</strong><br />
+              Peso em P5: <strong>R$ 0,60/un (21,5%)</strong>
+            </p>
+          </div>
+          <div class="formula-op">+</div>
+          <div class="molecule-box mp2">
+            <div class="molecule-ratio">2 × MP2</div>
+            <strong>Reagente T-Alpha (Quím. A)</strong>
+            <p class="bento-body" style="font-size:0.8rem;margin-top:6px;">
+              R$ 0,30 → <strong>R$ 0,58 (+93%)</strong><br />
+              Peso em P5: <strong>R$ 1,16/un (41,6%)</strong>
+            </p>
+          </div>
+          <div class="formula-op">+</div>
+          <div class="molecule-box mp3">
+            <div class="molecule-ratio">1 × MP3</div>
+            <strong>Catalisador G-Beta (Quím. B)</strong>
+            <p class="bento-body" style="font-size:0.8rem;margin-top:6px;">
+              R$ 0,59 → <strong>R$ 1,03 (+75%)</strong><br />
+              Peso em P5: <strong>R$ 1,03/un (36,9%)</strong>
+            </p>
+          </div>
+          <div class="formula-op">=</div>
+          <div class="molecule-box tfuel">
+            <div class="molecule-ratio">R$ 2,79 / un</div>
+            <strong>1 Unid. Biocombustível T-Fuel</strong>
+            <p class="bento-body" style="font-size:0.8rem;margin-top:6px;">
+              <span class="eq-pill">0,60 + 1,16 + 1,03 = R$ 2,79</span><br />
+              Total Aplicado P5: <strong>R$ 2,26 milhões</strong>
+            </p>
+          </div>
+        </div>
+
+        <div class="red-queen-box" style="margin-bottom:0;margin-top:18px;">
+          <div class="rq-avatar">RQ</div>
+          <div class="rq-content">
+            <div class="rq-header">RED QUEEN // ALERTA DE SENSIBILIDADE QUÍMICA (MP3)</div>
+            <p class="rq-text">
+              "Atenção ao <strong>Catalisador MP3</strong>: embora entre em apenas <strong>1/5 (20%) da proporção física</strong>, ele já consome
+              <strong>37% do custo de matéria-prima por unidade</strong> (R$ 1,03 de R$ 2,79). É o nosso insumo mais volátil."
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Animated Chart 04: Raw Material Cost Evolution -->
+      <div class="chart-panel reveal-on-scroll" id="chartRawMaterials" style="margin-top:24px;">
+        <div class="chart-header">
+          <div class="chart-title-group">
+            <h3>Gráfico 04 — Escalada de Custos por Insumo na Fórmula 2:2:1 (P1 a P5)</h3>
+            <p>Evolução de 2×MP1, 2×MP2, 1×MP3 e Custo Total de Matéria-Prima Aplicada por unidade (R$/un)</p>
+          </div>
+          <div class="chart-legend">
+            <span class="legend-item"><span class="legend-swatch" style="background:#e1112c"></span>2× MP1 (R$/un)</span>
+            <span class="legend-item"><span class="legend-swatch" style="background:#00e5ff"></span>2× MP2 (R$/un)</span>
+            <span class="legend-item"><span class="legend-swatch" style="background:#f59e0b"></span>1× MP3 (R$/un)</span>
+            <span class="legend-item"><span class="legend-swatch" style="background:#34d399"></span>Custo Total MP/un</span>
+          </div>
+        </div>
+        <div class="svg-chart-stage" id="svgStageRawMaterials"></div>
+      </div>
+    </section>
+
+    <div class="section-divider"></div>
+
+    <!-- =====================================================================
+         SECTION 03: 2º P — PREÇO (VALUE PRICING, ELASTICIDADE E DECOMPOSIÇÃO DO CPV)
+         ===================================================================== -->
+    <section class="section-shell" id="preco">
+      <div class="section-header reveal-on-scroll">
+        <span class="section-kicker emerald">03 // SEGUNDO PILAR: PREÇO</span>
+        <h2 class="section-title">Preço Baseado em Valor (+125%) e Margem Bruta de 73,1%.</h2>
+        <p class="section-subtitle">
+          Enquanto concorrentes como a <em>KuraMotor</em> disputam volume a preço baixo como zumbis no corredor, a Umbrella precifica
+          por valor tecnológico: subimos o preço de <strong>R$ 11,90 (P3) para R$ 26,76 (P5)</strong> e o mercado continuou comprando mais.
+        </p>
+      </div>
+
+      <!-- Visual Price Decomposition Bar (R$ 26,76 in P5) -->
+      <div class="bento-card emerald-accent reveal-on-scroll" style="margin-bottom:24px;">
+        <div class="bento-eyebrow">
+          <span>RAIO-X DE CADA UNIDADE VENDIDA EM P5 (PREÇO MÉDIO: R$ 26,76)</span>
+          <span class="badge-pill pos">LUCRO BRUTO: R$ 19,56 / UN</span>
+        </div>
+        <h3 class="bento-title">Decomposição Exata do Preço, CPV (R$ 7,20/un) e Custo Variável</h3>
+        <p class="bento-body">
+          Por que o CPV unitário subiu de R$ 4,07 (P3) para <strong>R$ 7,20 (P5)</strong> e o Custo Variável foi de R$ 1,73 para <strong>R$ 4,42/un</strong>?
+          Nossa controladoria abriu a conta ao centavo: o Custo Variável comercial não é ineficiência da Colmeia — é o <strong>imposto sobre vendas (12,5%) somado à comissão comercial (4% a 5%)</strong>, que cresce proporcionalmente ao nosso preço premium!
+        </p>
+
+        <div class="split-bar-container">
+          <div class="split-bar-track">
+            <div class="split-segment" style="width:10.4%;background:#f59e0b;" title="Matéria-Prima: R$ 2,79/un">MP R$ 2,79</div>
+            <div class="split-segment" style="width:16.5%;background:#e1112c;color:#fff;" title="Impostos (12,5%) + Comissão (4%): R$ 4,42/un">Trib.+Com. R$ 4,42</div>
+            <div class="split-segment" style="width:73.1%;background:#34d399;" title="Lucro Bruto: R$ 19,56/un (73,1%)">LUCRO BRUTO: R$ 19,56 / UN (73,1%)</div>
+          </div>
+          <div class="split-labels">
+            <span><strong>1. Matéria-Prima nas Vendidas (R$ 2,79/un • 38,7% do CPV):</strong> Soma R$ 2,26 mi da produção de P5 (810k un) + R$ 0,72 mi das 257.450 un retiradas do estoque de P.A. = <strong>R$ 2.973.076,30</strong>.</span>
+            <span><strong>2. Custo Variável Comercial (R$ 4,42/un • 61,3% do CPV):</strong> Alíquota sobre a Receita Bruta — 14,5% no P3 (R$ 768,5 mil), 17,5% no P4 (R$ 3,82 mi) e 16,5% no P5 (<strong>R$ 4.713.758,19</strong>).</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Regional Elasticity + ROA / Idle Cash -->
+      <div class="bento-grid-2">
+        <div class="bento-card reveal-on-scroll">
+          <div class="bento-eyebrow">
+            <span>RESPOSTA DO VOLUME AO PREÇO (P4 → P5)</span>
+            <span class="badge-pill pos">RECEITA +30,9% COM VOLUME +4,6%</span>
+          </div>
+          <h3 class="bento-title">Inelasticidade Regional: Preço Subiu e Volume Cresceu</h3>
+          <p class="bento-body">
+            O crescimento de receita em P5 veio quase integralmente da captura de preço. Mesmo com reajustes de +22,7% a +28,6%, todas as três regiões operadas compraram mais unidades:
+          </p>
+          <div class="table-scroll-wrapper">
+            <table class="umbrella-table">
+              <thead>
+                <tr>
+                  <th>Região</th>
+                  <th class="num-col">Preço P4</th>
+                  <th class="num-col">Preço P5</th>
+                  <th class="num-col">Choque Preço</th>
+                  <th class="num-col">Resposta Volume</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><strong>Região 2</strong></td>
+                  <td class="num-col">R$ 21,00</td>
+                  <td class="num-col">R$ 27,00</td>
+                  <td class="num-col"><span class="badge-pill warn">+28,6%</span></td>
+                  <td class="num-col"><span class="badge-pill pos">+0,9%</span> (143.499 un)</td>
+                </tr>
+                <tr>
+                  <td><strong>Região 3</strong></td>
+                  <td class="num-col">R$ 21,00</td>
+                  <td class="num-col">R$ 26,50</td>
+                  <td class="num-col"><span class="badge-pill warn">+26,2%</span></td>
+                  <td class="num-col"><span class="badge-pill pos">+2,3%</span> (505.837 un)</td>
+                </tr>
+                <tr>
+                  <td><strong>Região 4</strong></td>
+                  <td class="num-col">R$ 22,00</td>
+                  <td class="num-col">R$ 27,00</td>
+                  <td class="num-col"><span class="badge-pill warn">+22,7%</span></td>
+                  <td class="num-col"><span class="badge-pill pos">+8,9%</span> (418.114 un)</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <div class="bento-card amber-accent reveal-on-scroll">
+          <div class="bento-eyebrow">
+            <span>RETORNO (ROA 40,5%) &amp; COFRE PARADO</span>
+            <span class="badge-pill warn">R$ 20,47 MI SEM RENDIMENTO</span>
+          </div>
+          <div class="bento-big-number amber">69,4% em Caixa</div>
+          <h3 class="bento-title">O Dilema do Mercador: Ouro Parado no Cofre</h3>
+          <p class="bento-body">
+            Com dívida zero e Patrimônio Líquido de <strong>R$ 29,51 milhões</strong>, nosso ROA e ROE fecharam P5 em expressivos <strong>40,5%</strong>.
+            Porém, <strong>R$ 20,47 milhões</strong> estão estacionados em caixa com <strong>rendimento financeiro zero (R$ 0,00 aplicado)</strong>.
+          </p>
+          <div class="red-queen-box" style="margin-bottom:0;margin-top:14px;padding:16px 18px;">
+            <div class="rq-avatar">RQ</div>
+            <div class="rq-content">
+              <div class="rq-header">RED QUEEN // NOTA DE TESOURARIA</div>
+              <p class="rq-text" style="font-size:0.86rem;">
+                "Nem o Mercador (<em>'What're ya buyin'?'</em>) deixaria 20,5 milhões de Pesetas paradas no baú sem render juros. Precisamos separar o caixa operacional de P&amp;D/insumos e aplicar o excedente."
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Animated Charts 05 & 06 -->
+      <div class="bento-grid-2">
+        <div class="chart-panel reveal-on-scroll" id="chartUnitEconomics">
+          <div class="chart-header">
+            <div class="chart-title-group">
+              <h3>Gráfico 05 — Evolução Unitária: Insumos vs. Tributos/Comissão vs. Lucro Bruto (R$/un)</h3>
+              <p>O ganho de preço pulverizou o aumento dos custos variáveis entre P3 e P5</p>
+            </div>
+            <div class="chart-legend">
+              <span class="legend-item"><span class="legend-swatch" style="background:#f59e0b"></span>MP nas Vendidas</span>
+              <span class="legend-item"><span class="legend-swatch" style="background:#e1112c"></span>Tributos + Comissão</span>
+              <span class="legend-item"><span class="legend-swatch" style="background:#34d399"></span>Lucro Bruto / un</span>
+            </div>
+          </div>
+          <div class="svg-chart-stage" id="svgStageUnitEconomics"></div>
+        </div>
+
+        <div class="chart-panel reveal-on-scroll" id="chartOperationalProfit">
+          <div class="chart-header">
+            <div class="chart-title-group">
+              <h3>Gráfico 06 — Resultado Operacional Puro vs. Subvenções de Contenção (P1 a P5)</h3>
+              <p>Em P5, sem qualquer bônus externo, a geração operacional pura bateu R$ 14,06 milhões</p>
+            </div>
+            <div class="chart-legend">
+              <span class="legend-item"><span class="legend-swatch" style="background:#34d399"></span>Resultado Operacional Puro</span>
+              <span class="legend-item"><span class="legend-swatch" style="background:#a855f7"></span>Bônus Governamental (P3/P4)</span>
+              <span class="legend-item"><span class="legend-swatch" style="background:#00e5ff"></span>Lucro Líquido Final</span>
+            </div>
+          </div>
+          <div class="svg-chart-stage" id="svgStageOperationalProfit"></div>
+        </div>
+      </div>
+    </section>
+
+    <div class="section-divider"></div>
+
+    <!-- =====================================================================
+         SECTION 04: 3º P — PRAÇA (CAPACIDADE P+1, ESTOQUES E LOGÍSTICA REGIONAL)
+         ===================================================================== -->
+    <section class="section-shell" id="praca">
+      <div class="section-header reveal-on-scroll">
+        <span class="section-kicker cyan">04 // TERCEIRO PILAR: PRAÇA (CADEIA DE SUPRIMENTOS &amp; CAPACIDADE)</span>
+        <h2 class="section-title">Usina 1 no Limite em P5 (900k) e Duplicação para 1,80 Milhão no P6.</h2>
+        <p class="section-subtitle">
+          A arquitetura logística da Colmeia na Região 4 equilibra capacidade instalada, pulmão de matérias-primas e escoamento regional.
+          Como um novo módulo fabril leva 1 ciclo para maturar, o P5 foi o período de transição estratégica para dobrar nossa escala no P6.
+        </p>
+      </div>
+
+      <!-- Twin Plant Isometric Visual + Concise P+1 Explanation -->
+      <div class="plant-showcase-banner reveal-on-scroll">
+        <div>
+          <span class="section-kicker cyan">COMPLEXO INDUSTRIAL REGIÃO 4 // MATURAÇÃO DE USINAS</span>
+          <h3 class="bento-title" style="font-size:1.55rem;margin-top:6px;">
+            100% de Ocupação na Usina 1 (P3–P5) e Entrada da Usina 2 no P6
+          </h3>
+          <p class="bento-body" style="margin-bottom:14px;">
+            Cada módulo fabril custa R$ 1,50 milhão (sem depreciação contábil periódica) e só passa a produzir no ciclo seguinte à compra:
+          </p>
+          <div class="metric-strip-list">
+            <div class="metric-strip-item">
+              <span class="label">Capacidade Operacional Ativa em P5 (1 Usina)</span>
+              <span class="val" style="color:var(--bio-cyan);">900.000 un (Produção: 810.000 un = 90%)</span>
+            </div>
+            <div class="metric-strip-item">
+              <span class="label">Pedágio de Implantação da Usina 2 no P5</span>
+              <span class="val">Custo Fixo R$ 1,50 mi (+100%) e 58 func. (+71%)</span>
+            </div>
+            <div class="metric-strip-item">
+              <span class="label">Custo Fixo Unitário em P5 vs. Alvo P6</span>
+              <span class="val">Subiu de R$ 0,93 p/ R$ 1,85/un (cai c/ 1,6M un no P6)</span>
+            </div>
+            <div class="metric-strip-item">
+              <span class="label">Capacidade Operacional Ativa no P6 (2 Usinas)</span>
+              <span class="val" style="color:var(--bio-emerald-bright);">1.800.000 un nominais</span>
+            </div>
+          </div>
+        </div>
+        <div>
+          <img src="assets/umbrella-plant-twin.jpg" alt="Planta Industrial Dupla Umbrella Corp - Região 4" />
+        </div>
+      </div>
+
+      <!-- Animated Charts 07 & 08 -->
+      <div class="bento-grid-2">
+        <div class="chart-panel reveal-on-scroll" id="chartCapacityFlow">
+          <div class="chart-header">
+            <div class="chart-title-group">
+              <h3>Gráfico 07 — Capacidade Ativa (900k → 1,8M), Produção, Vendas e Estoque P.A.</h3>
+              <p>Em P4 e P5 as vendas (>1,0M un) superaram a capacidade de 1 usina (810k), consumindo o estoque para 380k un</p>
+            </div>
+            <div class="chart-legend">
+              <span class="legend-item"><span class="legend-swatch" style="background:#64748b"></span>Cap. Nominal Ativa</span>
+              <span class="legend-item"><span class="legend-swatch" style="background:#00e5ff"></span>Produção Real</span>
+              <span class="legend-item"><span class="legend-swatch" style="background:#e1112c"></span>Vendas Realizadas</span>
+              <span class="legend-item"><span class="legend-swatch" style="background:#f59e0b"></span>Estoque P.A.</span>
+            </div>
+          </div>
+          <div class="svg-chart-stage" id="svgStageCapacityFlow"></div>
+        </div>
+
+        <div class="chart-panel reveal-on-scroll" id="chartRegionalP5">
+          <div class="chart-header">
+            <div class="chart-title-group">
+              <h3>Gráfico 08 — Escoamento Regional em P5: Vendido vs. Diferença do Plano ("Perdida")</h3>
+              <p>Região 3 bateu 94% da meta; Região 4 concentrou 81% da folga não vendida (381.886 un)</p>
+            </div>
+            <div class="chart-legend">
+              <span class="legend-item"><span class="legend-swatch" style="background:#34d399"></span>Vendas Realizadas P5</span>
+              <span class="legend-item"><span class="legend-swatch" style="background:#e1112c"></span>Folga do Plano ("Venda Perdida")</span>
+            </div>
+          </div>
+          <div class="svg-chart-stage" id="svgStageRegionalP5"></div>
+        </div>
+      </div>
+
+      <!-- 3 Concise Cards: Plan Precision, Raw Material Coverage, Logistics -->
+      <div class="bento-grid-3">
+        <div class="bento-card reveal-on-scroll">
+          <div class="bento-eyebrow">
+            <span>PRECISÃO DO PLANO COMERCIAL</span>
+            <span class="badge-pill warn">SUPERESTIMADO EM 44%</span>
+          </div>
+          <h3 class="bento-title">Acurácia Subiu de 32% para 69%</h3>
+          <p class="bento-body">
+            Como nunca faltou produto acabado no armazém (sobrou saldo de 379.842 un em P5), a diferença entre planejado e realizado veio de otimismo comercial frente ao preço alto:
+          </p>
+          <div class="metric-strip-list">
+            <div class="metric-strip-item">
+              <span class="label">P3 (Plan. 1,40M vs. Real 445k)</span>
+              <span class="val">31,8% conversão (954k sobra)</span>
+            </div>
+            <div class="metric-strip-item">
+              <span class="label">P4 (Plan. 1,75M vs. Real 1,02M)</span>
+              <span class="val">58,3% conversão (730k sobra)</span>
+            </div>
+            <div class="metric-strip-item">
+              <span class="label">P5 (Plan. 1,54M vs. Real 1,07M)</span>
+              <span class="val" style="color:var(--bio-emerald-bright);">69,4% conversão (470k sobra)</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="bento-card cyan-accent reveal-on-scroll">
+          <div class="bento-eyebrow">
+            <span>PULMÃO DE MATÉRIA-PRIMA</span>
+            <span class="badge-pill info">R$ 5,71 MI (19,4% DO ATIVO)</span>
+          </div>
+          <h3 class="bento-title">Cobertura Exata para as 2 Usinas</h3>
+          <p class="bento-body">
+            Fechamos o P5 com <strong>4,17M de MP1</strong>, <strong>4,00M de MP2</strong> e <strong>2,09M de MP3</strong> em silos:
+          </p>
+          <div class="metric-strip-list">
+            <div class="metric-strip-item">
+              <span class="label">Cobertura p/ 1 Usina (810k un/ciclo)</span>
+              <span class="val">2,57 ciclos</span>
+            </div>
+            <div class="metric-strip-item">
+              <span class="label">Cobertura p/ 2 Usinas no P6 (1,62M un)</span>
+              <span class="val" style="color:var(--bio-cyan);">1,29 ciclo (ideal!)</span>
+            </div>
+            <div class="metric-strip-item">
+              <span class="label">Taxa de Armazenagem (2% ao ciclo)</span>
+              <span class="val">R$ 114 mil no P5 (R$ 323 mil acum.)</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="bento-card reveal-on-scroll">
+          <div class="bento-eyebrow">
+            <span>FRETE, FORNECEDORES &amp; REGIÃO 1</span>
+            <span class="badge-pill pos">FRETE: R$ 0,06 / UN</span>
+          </div>
+          <h3 class="bento-title">Logística Enxuta e Prazos</h3>
+          <p class="bento-body">
+            O transporte custou apenas <strong>R$ 64.934 em P5 (0,23% da receita)</strong> graças à sede na Região 4.
+          </p>
+          <div class="metric-strip-list">
+            <div class="metric-strip-item">
+              <span class="label">Região 3 (47% vol.) vs. Região 4 (39%)</span>
+              <span class="val">505.837 un (R3) / 418.114 un (R4)</span>
+            </div>
+            <div class="metric-strip-item">
+              <span class="label">Região 2 (13% vol.) vs. Região 1 (0%)</span>
+              <span class="val">143.499 un (R2) / 0 un (R1 fechada)</span>
+            </div>
+            <div class="metric-strip-item">
+              <span class="label">Fornecedores a Pagar (Pico R$ 1,64M no P3)</span>
+              <span class="val" style="color:var(--bio-emerald-bright);">R$ 0,00 em P5 (Quitado)</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="section-divider"></div>
+
+    <!-- =====================================================================
+         SECTION 05: 4º P — PROMOÇÃO (PROPAGANDA, ESG, PESSOAS & REPUTAÇÃO)
+         ===================================================================== -->
+    <section class="section-shell" id="promocao">
+      <div class="section-header reveal-on-scroll">
+        <span class="section-kicker amber">05 // QUARTO PILAR: PROMOÇÃO</span>
+        <h2 class="section-title">Propaganda, Blindagem ESG e Força Humana para Escalar as 2 Usinas.</h2>
+        <p class="section-subtitle">
+          Para convencer distribuidores a pagar R$ 26,76 por unidade de T-Fuel™, combinamos <strong>R$ 5,53 milhões em propaganda</strong>,
+          credencial científica Grau 2, investimentos em responsabilidade social e valorização da tropa operacional.
+        </p>
+      </div>
+
+      <div class="bento-grid-2">
+        <div class="bento-card amber-accent reveal-on-scroll">
+          <div class="bento-eyebrow">
+            <span>PROPAGANDA &amp; REPUTAÇÃO PÚBLICA (ESG)</span>
+            <span class="badge-pill warn">R$ 2,29 PROPAGANDA / UN</span>
+          </div>
+          <div class="bento-big-number amber">R$ 5,53 mi</div>
+          <h3 class="bento-title">Investimento Publicitário Acumulado (8,5% da Receita em P5)</h3>
+          <p class="bento-body">
+            Em P5 investimos <strong>R$ 2,44 milhões em publicidade</strong> (contra R$ 1,98 mi em P4 e R$ 501 mil em P3), além de
+            <strong>R$ 100 mil por ciclo em Responsabilidade Social</strong> desde P3 (R$ 320 mil acumulados — afinal, a Umbrella preza sua imagem pública impecável).
+          </p>
+          <div class="metric-strip-list">
+            <div class="metric-strip-item">
+              <span class="label">Propaganda por Unidade Vendida (P4 → P5)</span>
+              <span class="val">Subiu de R$ 1,94 para R$ 2,29/un (+18%)</span>
+            </div>
+            <div class="metric-strip-item">
+              <span class="label">Alavanca de Preço via Inovação (P3 → P4)</span>
+              <span class="val">Salto para Grau 2 sustentou +80% no preço</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="bento-card reveal-on-scroll">
+          <div class="bento-eyebrow">
+            <span>CAPITAL HUMANO &amp; PRODUTIVIDADE POR COLABORADOR</span>
+            <span class="badge-pill info">58 OPERADORES E VENDEDORES</span>
+          </div>
+          <div class="bento-big-number cyan">R$ 2,49 mi</div>
+          <h3 class="bento-title">Treinamento (R$ 1,30 mi) + Benefícios (R$ 1,19 mi)</h3>
+          <p class="bento-body">
+            No P5, ampliamos o efetivo de <strong>34 para 58 profissionais (+71%)</strong> e investimos R$ 800 mil em treinamento para preparar a operação da Usina 2 no P6.
+          </p>
+          <div class="metric-strip-list">
+            <div class="metric-strip-item">
+              <span class="label">Receita por Colaborador (P4 → P5)</span>
+              <span class="val" style="color:var(--bio-amber);">Caiu de R$ 642 mil p/ R$ 493 mil (pré-Usina 2)</span>
+            </div>
+            <div class="metric-strip-item">
+              <span class="label">Força de Vendas Ativa em P5 / P6</span>
+              <span class="val">17 Vendedores (3 na R2, 6 na R3, 8 na R4)</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Animated Chart 09: Marketing, People & Revenue per Employee -->
+      <div class="chart-panel reveal-on-scroll" id="chartPromotionHR">
+        <div class="chart-header">
+          <div class="chart-title-group">
+            <h3>Gráfico 09 — Propaganda, Investimento em Pessoas/ESG e Receita por Colaborador (P1 a P5)</h3>
+            <p>A contratação antecipada para a Usina 2 no P5 (58 pessoas) será diluída quando a produção dobrar no P6</p>
+          </div>
+          <div class="chart-legend">
+            <span class="legend-item"><span class="legend-swatch" style="background:#f59e0b"></span>Propaganda (R$ mi)</span>
+            <span class="legend-item"><span class="legend-swatch" style="background:#00e5ff"></span>Treinamento + Benefícios + ESG (R$ mi)</span>
+            <span class="legend-item"><span class="legend-swatch" style="background:#34d399"></span>Receita / Colaborador (R$ mil)</span>
+          </div>
+        </div>
+        <div class="svg-chart-stage" id="svgStagePromotionHR"></div>
+      </div>
+    </section>
+
+    <div class="section-divider"></div>
+
+    <!-- =====================================================================
+         SECTION 06: MATRIZ INTEGRADA DOS 4 Ps & DIAGNÓSTICO DE SINERGIA
+         ===================================================================== -->
+    <section class="section-shell" id="sinergia">
+      <div class="section-header reveal-on-scroll">
+        <span class="section-kicker">06 // SÍNTESE EXECUTIVA AO BOARD</span>
+        <h2 class="section-title">Matriz Estratégica dos 4 Ps e Diagnóstico de Coerência.</h2>
+        <p class="section-subtitle">
+          Nossa combinação de <strong>Produto Grau 2 + Preço Premium</strong> é a mais lucrativa do setor. O foco agora no Ciclo 6
+          é alinhar <strong>Praça e Promoção</strong> para escoar a capacidade duplicada de 1,80 milhão de unidades.
+        </p>
+      </div>
+
+      <!-- Strategic 4Ps Matrix Table -->
+      <div class="bento-card reveal-on-scroll" style="margin-bottom:24px;">
+        <div class="table-scroll-wrapper" style="margin:0;">
+          <table class="umbrella-table">
+            <thead>
+              <tr>
+                <th>Pilar</th>
+                <th>Foco Estratégico da Corporação</th>
+                <th>Alavancas de Decisão</th>
+                <th>Status Fechamento P5 &amp; Virada P6</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong style="color:var(--umbrella-red-bright);">PRODUTO</strong></td>
+                <td>Diferenciação tecnológica, produtividade e controle da fórmula 2:2:1</td>
+                <td>P&amp;D, Embalagem Premium, treinamento e gestão de compras MP1/MP2/MP3</td>
+                <td>Grau <strong>2</strong>; Produtividade <strong>90,0%</strong>; Custo MP <strong>R$ 2,79/un</strong> (MP3 = 37% do custo)</td>
+              </tr>
+              <tr>
+                <td><strong style="color:var(--bio-emerald-bright);">PREÇO</strong></td>
+                <td>Captura de valor tecnológico, proteção de margem e retorno sobre o ativo</td>
+                <td>Precificação regional, comissão de vendas e diluição do custo fixo por escala</td>
+                <td>Preço médio <strong>R$ 26,76/un</strong>; Margem Bruta <strong>73,1%</strong> (<strong>R$ 19,56/un</strong>); ROA <strong>40,5%</strong></td>
+              </tr>
+              <tr>
+                <td><strong style="color:var(--bio-cyan);">PRAÇA</strong></td>
+                <td>Escala das 2 usinas, cobertura de insumos e equilíbrio produção × venda</td>
+                <td>Ativação da Usina 2 no P6 (1,80M un), programação fabril e distribuição R2–R4</td>
+                <td>Cap. ativa sobe de <strong>900k (P5) p/ 1,80M (P6)</strong>; Estoque P.A. <strong>380k un</strong>; Cobertura MP de <strong>1,29 ciclo p/ 2 usinas</strong></td>
+              </tr>
+              <tr>
+                <td><strong style="color:var(--bio-amber);">PROMOÇÃO</strong></td>
+                <td>Credibilidade científica B2B, sustentação de demanda e precisão de metas</td>
+                <td>Propaganda regional, argumento Grau 2/3, ESG e calibragem do plano comercial</td>
+                <td>Conversão Real/Plano de <strong>69,4%</strong>; Propaganda <strong>8,5% da receita</strong> (R$ 2,29/un)</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <!-- Synergy vs Incoherence Cards -->
+      <div class="bento-grid-3">
+        <div class="bento-card emerald-accent reveal-on-scroll">
+          <div class="bento-eyebrow">
+            <span>A GRANDE FORÇA</span>
+            <span class="badge-pill pos">PRODUTO × PREÇO</span>
+          </div>
+          <h3 class="bento-title">Inovação Blindando a Margem</h3>
+          <p class="bento-body">
+            O salto para Grau de Inovação 2 e 90% de produtividade sustentou um preço médio de R$ 26,76/un com 73,1% de margem bruta, financiando toda a expansão sem dívidas.
+          </p>
+        </div>
+
+        <div class="bento-card cyan-accent reveal-on-scroll">
+          <div class="bento-eyebrow">
+            <span>O DESAFIO DE ESCALA</span>
+            <span class="badge-pill info">PRAÇA × VOLUME</span>
+          </div>
+          <h3 class="bento-title">Diluir o Custo Fixo de R$ 1,50 Milhão</h3>
+          <p class="bento-body">
+            Em P5 pagamos o custo fixo e a folha de 2 usinas enquanto só tínhamos 1 usina ativa (elevando o custo fixo para R$ 1,85/un). No P6, com as 2 usinas operando, produzir ~1,62 milhão de unidades derruba o custo fixo de volta a ~R$ 0,93/un.
+          </p>
+        </div>
+
+        <div class="bento-card amber-accent reveal-on-scroll">
+          <div class="bento-eyebrow">
+            <span>O PONTO DE ATENÇÃO</span>
+            <span class="badge-pill warn">PROMOÇÃO × PRAÇA</span>
+          </div>
+          <h3 class="bento-title">Calibrar a Meta da Região 4 e Abrir R1</h3>
+          <p class="bento-body">
+            A Região 4 concentrou 381.886 unidades de venda não concretizada em P5 (52% da meta), enquanto a Região 1 jamais foi explorada. Escoar 1,8 milhão de unidades exige calibrar preço/promoção na R4 ou entrar na R1.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <div class="section-divider"></div>
+
+    <!-- =====================================================================
+         SECTION 07: PLANO OPERACIONAL DO CICLO 6 & SIMULADOR RED QUEEN
+         ===================================================================== -->
+    <section class="section-shell" id="simulador-p6">
+      <div class="section-header reveal-on-scroll">
+        <span class="section-kicker">07 // DIRETRIZES TÁTICAS &amp; PLANO DO CICLO 6</span>
+        <h2 class="section-title">As 7 Diretrizes do Conselho vs. Configuração Atual do Ciclo 6.</h2>
+        <p class="section-subtitle">
+          Com as duas usinas ativas na Colmeia (<strong>1.800.000 unidades de capacidade nominal</strong>), veja abaixo como as 7 recomendações
+          estratégicas se conectam ao plano já parametrizado para o Ciclo 6 — e simule cenários ao vivo no terminal da Red Queen.
+        </p>
+      </div>
+
+      <div class="bento-card crimson-accent reveal-on-scroll">
+        <div class="bento-eyebrow">
+          <span>PAINEL DE COMANDO // CICLO P6 (2 USINAS EM OPERAÇÃO)</span>
+          <span class="badge-pill pos">META DE RECEITA P6: R$ 61,22 MILHÕES</span>
+        </div>
+        <div class="table-scroll-wrapper">
+          <table class="umbrella-table">
+            <thead>
+              <tr>
+                <th>#</th>
+                <th>Diretriz Estratégica dos 4 Ps</th>
+                <th>Comando Configurado para o Ciclo 6</th>
+                <th>Parecer da Red Queen</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>01</strong></td>
+                <td><strong>Elevar produção acima de 810k</strong> para evitar ruptura de estoque e aproveitar a Usina 2.</td>
+                <td><strong>Programação Fabril = 1.800.000 un</strong> (100% da capacidade nominal das 2 usinas; sem hora extra).</td>
+                <td><span class="badge-pill pos">POTÊNCIA MÁXIMA</span> Com ~91% de produtividade, entregará <strong>~1,64 milhão de unidades reais</strong>.</td>
+              </tr>
+              <tr>
+                <td><strong>02</strong></td>
+                <td><strong>Diluir o custo fixo de R$ 1,50 mi</strong> ganhando tração comercial nas regiões.</td>
+                <td><strong>Oferta Total = 2.079.842 un</strong> (R2: 380k @ R$ 29; R3: 800k @ R$ 29; R4: 900k @ R$ 30; R1: 0).</td>
+                <td><span class="badge-pill warn">META AGRESSIVA</span> Custo fixo cai para ~R$ 0,92/un produzida; atenção à elasticidade a R$ 29–30.</td>
+              </tr>
+              <tr>
+                <td><strong>03</strong></td>
+                <td><strong>Usar o pulmão atual de MP no P6</strong> e monitorar a inflação do Catalisador MP3.</td>
+                <td>Estoque atual cobre 100% do P6; nova compra de <strong>1.514.250 kits (R$ 9,33 mi)</strong> p/ abastecer o P7.</td>
+                <td><span class="badge-pill info">ESTOQUE BLINDADO</span> MP3 subiu para R$ 2,50 no novo lote; estoque antigo garante margem alta no P6.</td>
+              </tr>
+              <tr>
+                <td><strong>04</strong></td>
+                <td><strong>Avaliar retorno de P&amp;D rumo ao Grau 3</strong> para sustentar preços na faixa de R$ 30.</td>
+                <td><strong>P&amp;D = R$ 2,40 milhões</strong> (acumulado sobe a R$ 9,90 mi) + <strong>Treinamento = R$ 800 mil</strong>.</td>
+                <td><span class="badge-pill pos">RUMO AO GRAU 3</span> Sustenta o argumento comercial premium frente aos 7 concorrentes.</td>
+              </tr>
+              <tr>
+                <td><strong>05</strong></td>
+                <td><strong>Controlar o Custo Variável Comercial</strong> (Imposto 12,5% + Comissão).</td>
+                <td><strong>Comissão mantida em 5%</strong> + Embalagem Premium (R$ 1,30/un).</td>
+                <td><span class="badge-pill pos">SOB CONTROLE</span> Totaliza 17,5% sobre a receita realizada, amplamente coberto pelo preço.</td>
+              </tr>
+              <tr>
+                <td><strong>06</strong></td>
+                <td><strong>Rentabilizar o caixa excedente</strong> (R$ 20,47 mi disponíveis no início do P6).</td>
+                <td>Compra das <strong>5 Inteligências de Mercado (R$ 2,50 mi)</strong>; Aplicações Financeiras = R$ 0,00.</td>
+                <td><span class="badge-pill warn">OPORTUNIDADE</span> Ainda resta mais de R$ 9 milhões líquidos em caixa que poderiam render juros.</td>
+              </tr>
+              <tr>
+                <td><strong>07</strong></td>
+                <td><strong>Reduzir a distância entre venda planejada e realizada</strong> com reforço promocional.</td>
+                <td>Propaganda recorde de <strong>R$ 4,44 milhões</strong> (6 cotas R2, 7 cotas R3, 8 cotas R4).</td>
+                <td><span class="badge-pill info">IMPULSO MÁXIMO</span> Acelera a absorção nas Regiões 2, 3 e 4 para buscar lucro líquido &gt; R$ 20 milhões.</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <!-- Interactive P6 Red Queen Production Calculator -->
+      <div class="simulator-console reveal-on-scroll">
+        <div class="bento-eyebrow">
+          <span>TERMINAL DE PROJEÇÃO NEURAL RED QUEEN // CICLO 6 (CAPACIDADE ATIVA: 1.800.000 UN)</span>
+          <span class="badge-pill pos">INTERATIVO</span>
+        </div>
+        <h3 class="bento-title">Projeção Neural de Produção, Diluição de Custo Fixo e Consumo de Insumos</h3>
+        <p class="bento-body">
+          Ajuste os controles abaixo para projetar o balanço industrial do Ciclo 6 considerando nosso estoque inicial de
+          <strong>379.842 unidades acabadas</strong> e a regra <span class="eq-pill">Produção = Venda Esperada + Estoque Segurança − 379.842</span>:
+        </p>
+
+        <div class="sim-preset-btns">
+          <button type="button" class="sim-btn active" id="presetDoc">Cenário Conservador (Venda 1,10M + Seg. 350k)</button>
+          <button type="button" class="sim-btn" id="presetScale">Cenário Escala Ótima (Prod. 90,5% = 1,63M un)</button>
+          <button type="button" class="sim-btn" id="presetOggP6">Cenário Plano P6 Atual (Meta Máxima)</button>
+        </div>
+
+        <div class="sim-grid">
+          <div class="sim-controls">
+            <div class="sim-control-group">
+              <div class="sim-control-header">
+                <label for="simSales">Venda Esperada no Ciclo 6 (un)</label>
+                <span class="sim-control-val" id="valSimSales">1.100.000 un</span>
+              </div>
+              <input type="range" id="simSales" class="sim-slider" min="800000" max="2000000" step="10000" value="1100000" />
+            </div>
+
+            <div class="sim-control-group">
+              <div class="sim-control-header">
+                <label for="simSafetyStock">Estoque Final de Segurança Desejado (un)</label>
+                <span class="sim-control-val" id="valSimSafetyStock">350.000 un</span>
+              </div>
+              <input type="range" id="simSafetyStock" class="sim-slider" min="0" max="600000" step="10000" value="350000" />
+            </div>
+
+            <div class="sim-control-group">
+              <div class="sim-control-header">
+                <label for="simProductivity">Produtividade Efetiva das 2 Usinas (%)</label>
+                <span class="sim-control-val" id="valSimProductivity">90,5%</span>
+              </div>
+              <input type="range" id="simProductivity" class="sim-slider" min="85" max="100" step="0.5" value="90.5" />
+            </div>
+
+            <div class="sim-control-group">
+              <div class="sim-control-header">
+                <label for="simPrice">Preço Médio de Venda (R$/un)</label>
+                <span class="sim-control-val" id="valSimPrice">R$ 28,50</span>
+              </div>
+              <input type="range" id="simPrice" class="sim-slider" min="22" max="32" step="0.25" value="28.50" />
+            </div>
+          </div>
+
+          <div class="sim-outputs">
+            <div class="sim-out-box">
+              <span class="sim-out-label">PRODUÇÃO REQUERIDA NAS 2 USINAS</span>
+              <span class="sim-out-value" id="outReqProd">1.070.158 un</span>
+              <span class="sim-out-note" id="outCapCheck">Ocupação de 59,5% da capacidade nominal (1,80M)</span>
+            </div>
+
+            <div class="sim-out-box">
+              <span class="sim-out-label">CUSTO FIXO POR UNIDADE PRODUZIDA</span>
+              <span class="sim-out-value" id="outFixedUnit" style="color:var(--bio-cyan);">R$ 1,40 / un</span>
+              <span class="sim-out-note" id="outFixedCompare">Em P5 foi R$ 1,85/un (meta ideal ≤ R$ 0,93/un)</span>
+            </div>
+
+            <div class="sim-out-box">
+              <span class="sim-out-label">CONSUMO MP1 / MP2 / MP3 (2:2:1)</span>
+              <span class="sim-out-value" id="outMpConsumption" style="font-size:1.18rem;">2,14M / 2,14M / 1,07M</span>
+              <span class="sim-out-note" id="outMpStatus">100% coberto pelo estoque atual nos silos!</span>
+            </div>
+
+            <div class="sim-out-box">
+              <span class="sim-out-label">RECEITA BRUTA &amp; LUCRO BRUTO PROJ.</span>
+              <span class="sim-out-value" id="outRevProfit" style="color:var(--bio-emerald-bright);">R$ 31,35 mi</span>
+              <span class="sim-out-note" id="outGrossMargin">Lucro Bruto: R$ 22,02 mi (Margem Bruta 70,2%)</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="section-divider"></div>
+
+    <!-- =====================================================================
+         SECTION 08: DEMONSTRATIVOS CONTÁBEIS & INTELIGÊNCIA COMPETITIVA
+         ===================================================================== -->
+    <section class="section-shell" id="contabil">
+      <div class="section-header reveal-on-scroll">
+        <span class="section-kicker">08 // ANEXO FINANCEIRO &amp; ARENA COMPETITIVA</span>
+        <h2 class="section-title">Demonstrativos Auditados (P1 a P5) e Mapeamento de Rivais.</h2>
+        <p class="section-subtitle">
+          Acesso direto às demonstrações contábeis integrais da Umbrella Corporation (DRE, Fluxo de Caixa e Balanço Patrimonial)
+          e ao radar das corporações concorrentes.
+        </p>
+      </div>
+
+      <div class="reveal-on-scroll">
+        <div class="segmented-tabs" role="tablist">
+          <button type="button" class="tab-btn active" data-tab="tab-dre" role="tab" aria-selected="true">D.R.E. Consolidada (P1–P5)</button>
+          <button type="button" class="tab-btn" data-tab="tab-fc" role="tab" aria-selected="false">Fluxo de Caixa (P1–P5)</button>
+          <button type="button" class="tab-btn" data-tab="tab-bp" role="tab" aria-selected="false">Balanço Patrimonial (P1–P5)</button>
+          <button type="button" class="tab-btn" data-tab="tab-verificacao" role="tab" aria-selected="false">Radar de Concorrentes &amp; Notas</button>
+        </div>
+
+        <!-- TAB 1: DRE -->
+        <div class="tab-pane active" id="tab-dre">
+          <div class="bento-card">
+            <div class="bento-eyebrow">
+              <span>DEMONSTRAÇÃO DO RESULTADO DO EXERCÍCIO (EM R$)</span>
+              <span class="badge-pill pos">LUCRO ACUMULADO: R$ 19.510.160,80</span>
+            </div>
+            <div class="table-scroll-wrapper">
+              <table class="umbrella-table">
+                <thead>
+                  <tr>
+                    <th>Rubrica Contábil</th>
+                    <th class="num-col">P01</th>
+                    <th class="num-col">P02</th>
+                    <th class="num-col">P03</th>
+                    <th class="num-col">P04</th>
+                    <th class="num-col">P05</th>
+                    <th class="num-col">Acumulado P1–P5</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr class="highlight-row">
+                    <td><strong>Receita Bruta de Vendas</strong></td>
+                    <td class="num-col">0,00</td>
+                    <td class="num-col">0,00</td>
+                    <td class="num-col">5.300.108,20</td>
+                    <td class="num-col">21.820.212,00</td>
+                    <td class="num-col">28.568.231,50</td>
+                    <td class="num-col"><strong>55.688.551,70</strong></td>
+                  </tr>
+                  <tr>
+                    <td>(-) Custo dos Produtos Vendidos (CPV)</td>
+                    <td class="num-col">0,00</td>
+                    <td class="num-col">0,00</td>
+                    <td class="num-col">1.811.104,72</td>
+                    <td class="num-col">6.582.713,45</td>
+                    <td class="num-col">7.686.834,49</td>
+                    <td class="num-col">16.080.652,66</td>
+                  </tr>
+                  <tr class="highlight-row">
+                    <td><strong>(=) Lucro Bruto</strong></td>
+                    <td class="num-col">0,00</td>
+                    <td class="num-col">0,00</td>
+                    <td class="num-col">3.489.003,48</td>
+                    <td class="num-col">15.237.498,55</td>
+                    <td class="num-col">20.881.397,01</td>
+                    <td class="num-col"><strong>39.607.899,04</strong></td>
+                  </tr>
+                  <tr>
+                    <td>(-) Custo Fixo de Produção</td>
+                    <td class="num-col">600.000,00</td>
+                    <td class="num-col">600.000,00</td>
+                    <td class="num-col">750.000,00</td>
+                    <td class="num-col">750.000,00</td>
+                    <td class="num-col">1.500.000,00</td>
+                    <td class="num-col">4.200.000,00</td>
+                  </tr>
+                  <tr>
+                    <td>(-) Folha de Salários</td>
+                    <td class="num-col">145.000,00</td>
+                    <td class="num-col">190.800,00</td>
+                    <td class="num-col">239.400,00</td>
+                    <td class="num-col">258.300,00</td>
+                    <td class="num-col">428.400,00</td>
+                    <td class="num-col">1.261.900,00</td>
+                  </tr>
+                  <tr>
+                    <td>(-) Treinamento de Pessoal</td>
+                    <td class="num-col">0,00</td>
+                    <td class="num-col">100.000,00</td>
+                    <td class="num-col">0,00</td>
+                    <td class="num-col">400.000,00</td>
+                    <td class="num-col">800.000,00</td>
+                    <td class="num-col">1.300.000,00</td>
+                  </tr>
+                  <tr>
+                    <td>(-) Benefícios Corporativos</td>
+                    <td class="num-col">49.500,00</td>
+                    <td class="num-col">178.060,00</td>
+                    <td class="num-col">255.750,00</td>
+                    <td class="num-col">229.500,00</td>
+                    <td class="num-col">478.500,00</td>
+                    <td class="num-col">1.191.310,00</td>
+                  </tr>
+                  <tr>
+                    <td>(-) Responsabilidade Social (ESG)</td>
+                    <td class="num-col">0,00</td>
+                    <td class="num-col">20.000,00</td>
+                    <td class="num-col">100.000,00</td>
+                    <td class="num-col">100.000,00</td>
+                    <td class="num-col">100.000,00</td>
+                    <td class="num-col">320.000,00</td>
+                  </tr>
+                  <tr class="crimson-row">
+                    <td><strong>(-) Pesquisa &amp; Desenvolvimento (Laboratórios Arklay)</strong></td>
+                    <td class="num-col">1.350.000,00</td>
+                    <td class="num-col">1.050.000,00</td>
+                    <td class="num-col">1.500.000,00</td>
+                    <td class="num-col">2.700.000,00</td>
+                    <td class="num-col">900.000,00</td>
+                    <td class="num-col"><strong>7.500.000,00</strong></td>
+                  </tr>
+                  <tr>
+                    <td>(-) Publicidade e Propaganda</td>
+                    <td class="num-col">0,00</td>
+                    <td class="num-col">612.000,00</td>
+                    <td class="num-col">500.703,70</td>
+                    <td class="num-col">1.980.264,60</td>
+                    <td class="num-col">2.439.911,90</td>
+                    <td class="num-col">5.532.880,20</td>
+                  </tr>
+                  <tr>
+                    <td>(-) Custo de Estocagem de MP (2%)</td>
+                    <td class="num-col">23.952,15</td>
+                    <td class="num-col">37.393,43</td>
+                    <td class="num-col">46.985,19</td>
+                    <td class="num-col">100.764,27</td>
+                    <td class="num-col">114.223,81</td>
+                    <td class="num-col">323.318,85</td>
+                  </tr>
+                  <tr>
+                    <td>(-) Transporte e Logística</td>
+                    <td class="num-col">0,00</td>
+                    <td class="num-col">0,00</td>
+                    <td class="num-col">22.033,90</td>
+                    <td class="num-col">63.679,40</td>
+                    <td class="num-col">64.933,60</td>
+                    <td class="num-col">150.646,90</td>
+                  </tr>
+                  <tr>
+                    <td><strong>Total de Despesas Operacionais</strong></td>
+                    <td class="num-col">2.168.452,15</td>
+                    <td class="num-col">2.788.253,43</td>
+                    <td class="num-col">3.414.872,79</td>
+                    <td class="num-col">6.582.508,27</td>
+                    <td class="num-col">6.825.969,31</td>
+                    <td class="num-col"><strong>21.780.055,95</strong></td>
+                  </tr>
+                  <tr>
+                    <td>(+) Subvenção / Bônus Governamental</td>
+                    <td class="num-col">0,00</td>
+                    <td class="num-col">0,00</td>
+                    <td class="num-col">6.000.000,00</td>
+                    <td class="num-col">6.000.000,00</td>
+                    <td class="num-col">0,00</td>
+                    <td class="num-col">12.000.000,00</td>
+                  </tr>
+                  <tr>
+                    <td><strong>(=) Lucro Antes do IR (LAIR)</strong></td>
+                    <td class="num-col">-2.168.452,15</td>
+                    <td class="num-col">-2.788.253,43</td>
+                    <td class="num-col">74.130,69</td>
+                    <td class="num-col">14.654.990,28</td>
+                    <td class="num-col">14.055.427,70</td>
+                    <td class="num-col"><strong>23.827.843,09</strong></td>
+                  </tr>
+                  <tr>
+                    <td>(-) Imposto de Renda (15%)</td>
+                    <td class="num-col">0,00</td>
+                    <td class="num-col">0,00</td>
+                    <td class="num-col">11.119,60</td>
+                    <td class="num-col">2.198.248,54</td>
+                    <td class="num-col">2.108.314,15</td>
+                    <td class="num-col">4.317.682,29</td>
+                  </tr>
+                  <tr class="highlight-row">
+                    <td><strong>(=) Lucro Líquido do Ciclo</strong></td>
+                    <td class="num-col">-2.168.452,15</td>
+                    <td class="num-col">-2.788.253,43</td>
+                    <td class="num-col">63.011,09</td>
+                    <td class="num-col">12.456.741,74</td>
+                    <td class="num-col"><strong>11.947.113,55</strong></td>
+                    <td class="num-col"><strong>19.510.160,80</strong></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+
+        <!-- TAB 2: FLUXO DE CAIXA -->
+        <div class="tab-pane" id="tab-fc">
+          <div class="bento-card">
+            <div class="bento-eyebrow">
+              <span>FLUXO DE CAIXA AUDITADO (EM R$)</span>
+              <span class="badge-pill info">SALDO FINAL P5: R$ 20.470.288,03</span>
+            </div>
+            <div class="table-scroll-wrapper">
+              <table class="umbrella-table">
+                <thead>
+                  <tr>
+                    <th>Movimentação de Caixa</th>
+                    <th class="num-col">P01</th>
+                    <th class="num-col">P02</th>
+                    <th class="num-col">P03</th>
+                    <th class="num-col">P04</th>
+                    <th class="num-col">P05</th>
+                    <th class="num-col">Acumulado P1–P5</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><strong>Saldo Inicial de Caixa</strong></td>
+                    <td class="num-col">10.000.000,00</td>
+                    <td class="num-col">5.133.940,35</td>
+                    <td class="num-col">1.436.686,92</td>
+                    <td class="num-col">1.274.151,95</td>
+                    <td class="num-col">10.504.311,98</td>
+                    <td class="num-col">–</td>
+                  </tr>
+                  <tr>
+                    <td>(+) Recebimentos à Vista de Clientes</td>
+                    <td class="num-col">0,00</td>
+                    <td class="num-col">0,00</td>
+                    <td class="num-col">5.300.108,20</td>
+                    <td class="num-col">21.820.212,00</td>
+                    <td class="num-col">28.568.231,50</td>
+                    <td class="num-col">55.688.551,70</td>
+                  </tr>
+                  <tr>
+                    <td>(+) Subvenção Governamental</td>
+                    <td class="num-col">0,00</td>
+                    <td class="num-col">0,00</td>
+                    <td class="num-col">6.000.000,00</td>
+                    <td class="num-col">6.000.000,00</td>
+                    <td class="num-col">0,00</td>
+                    <td class="num-col">12.000.000,00</td>
+                  </tr>
+                  <tr class="highlight-row">
+                    <td><strong>(=) Total de Entradas</strong></td>
+                    <td class="num-col">0,00</td>
+                    <td class="num-col">0,00</td>
+                    <td class="num-col">11.300.108,20</td>
+                    <td class="num-col">27.820.212,00</td>
+                    <td class="num-col">28.568.231,50</td>
+                    <td class="num-col"><strong>67.688.551,70</strong></td>
+                  </tr>
+                  <tr>
+                    <td>(-) Despesas Operacionais (DRE)</td>
+                    <td class="num-col">2.168.452,15</td>
+                    <td class="num-col">2.788.253,43</td>
+                    <td class="num-col">3.414.872,79</td>
+                    <td class="num-col">6.582.508,27</td>
+                    <td class="num-col">6.825.969,31</td>
+                    <td class="num-col">21.780.055,95</td>
+                  </tr>
+                  <tr class="crimson-row">
+                    <td><strong>(-) Aquisição de Módulos Fabris (Usina 1 no P1 • Usina 2 no P5)</strong></td>
+                    <td class="num-col">1.500.000,00</td>
+                    <td class="num-col">0,00</td>
+                    <td class="num-col">0,00</td>
+                    <td class="num-col">0,00</td>
+                    <td class="num-col"><strong>1.500.000,00</strong></td>
+                    <td class="num-col"><strong>3.000.000,00</strong></td>
+                  </tr>
+                  <tr>
+                    <td>(-) Custo Variável Comercial (Impostos 12,5% + Comissão)</td>
+                    <td class="num-col">0,00</td>
+                    <td class="num-col">0,00</td>
+                    <td class="num-col">768.515,69</td>
+                    <td class="num-col">3.818.537,11</td>
+                    <td class="num-col">4.713.758,19</td>
+                    <td class="num-col">9.300.810,99</td>
+                  </tr>
+                  <tr>
+                    <td>(-) Imposto de Renda Pago</td>
+                    <td class="num-col">0,00</td>
+                    <td class="num-col">0,00</td>
+                    <td class="num-col">11.119,60</td>
+                    <td class="num-col">2.198.248,54</td>
+                    <td class="num-col">2.108.314,15</td>
+                    <td class="num-col">4.317.682,29</td>
+                  </tr>
+                  <tr>
+                    <td>(-) Pagamentos de Matéria-Prima</td>
+                    <td class="num-col">1.197.607,50</td>
+                    <td class="num-col">909.000,00</td>
+                    <td class="num-col">1.268.135,09</td>
+                    <td class="num-col">5.990.758,05</td>
+                    <td class="num-col">3.454.213,80</td>
+                    <td class="num-col">12.819.714,44</td>
+                  </tr>
+                  <tr class="highlight-row">
+                    <td><strong>(=) Saldo Final Ajustado em Cofre</strong></td>
+                    <td class="num-col">5.133.940,35</td>
+                    <td class="num-col">1.436.686,92</td>
+                    <td class="num-col">1.274.151,95</td>
+                    <td class="num-col">10.504.311,98</td>
+                    <td class="num-col"><strong>20.470.288,03</strong></td>
+                    <td class="num-col">–</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+
+        <!-- TAB 3: BALANÇO PATRIMONIAL -->
+        <div class="tab-pane" id="tab-bp">
+          <div class="bento-card">
+            <div class="bento-eyebrow">
+              <span>BALANÇO PATRIMONIAL AUDITADO (EM R$)</span>
+              <span class="badge-pill pos">PATRIMÔNIO LÍQUIDO P5: R$ 29.510.160,80</span>
+            </div>
+            <div class="table-scroll-wrapper">
+              <table class="umbrella-table">
+                <thead>
+                  <tr>
+                    <th>Conta Patrimonial</th>
+                    <th class="num-col">P01</th>
+                    <th class="num-col">P02</th>
+                    <th class="num-col">P03</th>
+                    <th class="num-col">P04</th>
+                    <th class="num-col">P05</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr class="highlight-row">
+                    <td><strong>TOTAL DO ATIVO</strong></td>
+                    <td class="num-col">7.831.547,85</td>
+                    <td class="num-col">5.606.874,42</td>
+                    <td class="num-col">6.745.997,37</td>
+                    <td class="num-col">18.088.261,07</td>
+                    <td class="num-col"><strong>29.510.160,81</strong></td>
+                  </tr>
+                  <tr>
+                    <td>• Caixa Disponível</td>
+                    <td class="num-col">5.133.940,35</td>
+                    <td class="num-col">1.436.686,92</td>
+                    <td class="num-col">1.274.151,95</td>
+                    <td class="num-col">10.504.311,98</td>
+                    <td class="num-col">20.470.288,03</td>
+                  </tr>
+                  <tr>
+                    <td>• Aplicações Financeiras / Contas a Receber</td>
+                    <td class="num-col">0,00</td>
+                    <td class="num-col">0,00</td>
+                    <td class="num-col">0,00</td>
+                    <td class="num-col">0,00</td>
+                    <td class="num-col">0,00</td>
+                  </tr>
+                  <tr>
+                    <td>• Estoque de Matéria-Prima</td>
+                    <td class="num-col">1.197.607,50</td>
+                    <td class="num-col">1.869.671,70</td>
+                    <td class="num-col">2.349.259,65</td>
+                    <td class="num-col">5.038.213,54</td>
+                    <td class="num-col">5.711.190,48</td>
+                  </tr>
+                  <tr>
+                    <td>• Estoque de Produto Acabado</td>
+                    <td class="num-col">0,00</td>
+                    <td class="num-col">800.515,80</td>
+                    <td class="num-col">1.622.585,77</td>
+                    <td class="num-col">1.045.735,55</td>
+                    <td class="num-col">328.682,30</td>
+                  </tr>
+                  <tr class="crimson-row">
+                    <td><strong>• Ativo Permanente — Imobilizado (Usinas)</strong></td>
+                    <td class="num-col">1.500.000,00</td>
+                    <td class="num-col">1.500.000,00</td>
+                    <td class="num-col">1.500.000,00</td>
+                    <td class="num-col">1.500.000,00</td>
+                    <td class="num-col"><strong>3.000.000,00</strong></td>
+                  </tr>
+                  <tr>
+                    <td><strong>PASSIVO CIRCULANTE (Fornecedores a Pagar)</strong></td>
+                    <td class="num-col">0,00</td>
+                    <td class="num-col">563.580,00</td>
+                    <td class="num-col">1.639.691,85</td>
+                    <td class="num-col">525.213,80</td>
+                    <td class="num-col"><strong>0,00</strong></td>
+                  </tr>
+                  <tr>
+                    <td>• Empréstimos Bancários</td>
+                    <td class="num-col">0,00</td>
+                    <td class="num-col">0,00</td>
+                    <td class="num-col">0,00</td>
+                    <td class="num-col">0,00</td>
+                    <td class="num-col">0,00</td>
+                  </tr>
+                  <tr class="highlight-row">
+                    <td><strong>PATRIMÔNIO LÍQUIDO (Capital R$ 10M + Lucros Acum.)</strong></td>
+                    <td class="num-col">7.831.547,85</td>
+                    <td class="num-col">5.043.294,42</td>
+                    <td class="num-col">5.106.305,51</td>
+                    <td class="num-col">17.563.047,25</td>
+                    <td class="num-col"><strong>29.510.160,80</strong></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+
+        <!-- TAB 4: RADAR DE CONCORRENTES -->
+        <div class="tab-pane" id="tab-verificacao">
+          <div class="bento-grid-2">
+            <div class="bento-card crimson-accent">
+              <div class="bento-eyebrow">
+                <span>INTELIGÊNCIA CORPORATIVA // RIVAIS MONITORADOS</span>
+                <span class="badge-pill info">8 CORPORAÇÕES NO SETOR</span>
+              </div>
+              <h3 class="bento-title">Posicionamento Competitivo da Umbrella Corp.</h3>
+              <div class="metric-strip-list">
+                <div class="metric-strip-item">
+                  <span class="label"><strong style="color:var(--bio-emerald-bright);">Umbrella Corp. (Nossa Divisão)</strong></span>
+                  <span class="val">Líder em Inovação (Grau 2) e Margem (73,1%)</span>
+                </div>
+                <div class="metric-strip-item">
+                  <span class="label">KuraMotor</span>
+                  <span class="val">Ofensiva em volume de preço baixo desde P1</span>
+                </div>
+                <div class="metric-strip-item">
+                  <span class="label">ValeVerde &amp; BIOSAFRA</span>
+                  <span class="val">Atuação intermediária (16% share inicial)</span>
+                </div>
+                <div class="metric-strip-item">
+                  <span class="label">Galo Elétrico, Posto Ipirango, EcoBoost e KUmbustão</span>
+                  <span class="val">Participação secundária nas Regiões 3 e 4</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="bento-card emerald-accent">
+              <div class="bento-eyebrow">
+                <span>PARECER TÉCNICO DA CONTROLADORIA</span>
+                <span class="badge-pill pos">100% AUDITADO</span>
+              </div>
+              <h3 class="bento-title">Notas de Engenharia e Contabilidade</h3>
+              <div class="metric-strip-list">
+                <div class="metric-strip-item">
+                  <span class="label">Maturação de Usinas</span>
+                  <span class="val">Usina comprada em P opera em P+1 (1,80M no P6)</span>
+                </div>
+                <div class="metric-strip-item">
+                  <span class="label">Imobilizado &amp; Desmobilização</span>
+                  <span class="val">Sem depreciação periódica (deságio 60% se vendida)</span>
+                </div>
+                <div class="metric-strip-item">
+                  <span class="label">Fórmula de Síntese T-Fuel™</span>
+                  <span class="val">2 MP1 + 2 MP2 + 1 MP3 (Entrega em P+1)</span>
+                </div>
+                <div class="metric-strip-item">
+                  <span class="label">Fechamento CPV (P5)</span>
+                  <span class="val">R$ 2,97M (MP vendida) + R$ 4,71M (Imposto+Com.)</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="umbrella-footer">
+    <div class="footer-inner">
+      <svg class="umbrella-octagon-svg" viewBox="0 0 100 100" aria-hidden="true">
+        <polygon points="30,4 70,4 96,30 96,70 70,96 30,96 4,70 4,30" fill="#07070b" stroke="#e1112c" stroke-width="3"/>
+        <polygon points="50,50 32,8 68,8" fill="#e1112c"/>
+        <polygon points="50,50 68,8 92,32" fill="#f8fafc"/>
+        <polygon points="50,50 92,32 92,68" fill="#e1112c"/>
+        <polygon points="50,50 92,68 68,92" fill="#f8fafc"/>
+        <polygon points="50,50 68,92 32,92" fill="#e1112c"/>
+        <polygon points="50,50 32,92 8,68" fill="#f8fafc"/>
+        <polygon points="50,50 8,68 8,32" fill="#e1112c"/>
+        <polygon points="50,50 8,32 32,8" fill="#f8fafc"/>
+        <circle cx="50" cy="50" r="8" fill="#07070b" stroke="#e1112c" stroke-width="2"/>
+      </svg>
+      <div class="footer-motto">"OUR BUSINESS IS LIFE ITSELF" — UMBRELLA CORPORATION BIO-ENERGY DIVISION</div>
+      <p class="footer-meta">
+        Relatório Confidencial ao Conselho de Administração • Complexo Industrial A Colmeia (Região 4) •
+        Diretoria Executiva: Valber, Allan, Humberto, Mateus.
+      </p>
+    </div>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
