@@ -289,14 +289,14 @@ function renderChart01FinancialTrajectory() {
 }
 
 /**
- * Chart 02: P&D Anual vs Acumulado e Grau de Inovação (P1 a P5 + P6)
+ * Chart 02: P&D por Período vs Acumulado e Grau de Inovação (P1 a P5 + P6)
  */
 function renderChart02PnD() {
   const host = document.getElementById("svgStagePnD");
   if (!host) return;
 
   const periods = ["P1", "P2", "P3", "P4", "P5", "P6 (Prev)"];
-  const anual = [1.35, 1.05, 1.5, 2.7, 0.9, 2.4];
+  const porPeriodo = [1.35, 1.05, 1.5, 2.7, 0.9, 2.4];
   const acum = [1.35, 2.4, 3.9, 6.6, 7.5, 9.9];
   const grau = ["Grau 1", "Grau 1", "Grau 1", "GRAU 2", "GRAU 2", "Alvo G3"];
 
@@ -310,10 +310,10 @@ function renderChart02PnD() {
 
   periods.forEach((p, i) => {
     const x = 68 + i * 90;
-    const barH = anual[i] * scaleY;
+    const barH = porPeriodo[i] * scaleY;
     svgContent += `
       <rect class="anim-bar" style="transition-delay:${i * 80}ms" x="${x - 18}" y="${baseY - barH}" width="36" height="${barH}" rx="5" fill="#e1112c" />
-      <text x="${x}" y="${baseY - barH - 7}" text-anchor="middle" fill="#fda4af" font-size="10.5" font-family="monospace">R$ ${anual[i].toFixed(2)}M</text>
+      <text x="${x}" y="${baseY - barH - 7}" text-anchor="middle" fill="#fda4af" font-size="10.5" font-family="monospace">R$ ${porPeriodo[i].toFixed(2)}M</text>
       <text x="${x}" y="${baseY + 18}" text-anchor="middle" fill="#f8fafc" font-size="11" font-weight="700" font-family="monospace">${p}</text>
       <text x="${x}" y="${baseY + 34}" text-anchor="middle" fill="${i >= 3 ? "#34d399" : "#94a3b8"}" font-size="9.5" font-weight="700" font-family="monospace">${grau[i]}</text>
     `;
@@ -333,7 +333,7 @@ function renderChart02PnD() {
     .join("");
 
   host.innerHTML = `
-    <svg viewBox="0 0 ${W} ${H}" role="img" aria-label="Investimento em P&D Anual e Acumulado">
+    <svg viewBox="0 0 ${W} ${H}" role="img" aria-label="Investimento em P&D por Período e Acumulado">
       <line x1="30" y1="${baseY}" x2="${W - 20}" y2="${baseY}" stroke="rgba(255,255,255,0.2)"/>
       <line x1="30" y1="${baseY - 6.6 * scaleY}" x2="${W - 20}" y2="${baseY - 6.6 * scaleY}" stroke="rgba(52,211,153,0.3)" stroke-dasharray="4 4"/>
       <text x="${W - 24}" y="${baseY - 6.6 * scaleY - 5}" text-anchor="end" fill="#34d399" font-size="9.5" font-family="monospace">Limiar Grau 2 (R$ 6,60M em P4)</text>
