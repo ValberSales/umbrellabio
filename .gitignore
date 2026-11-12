@@ -1,3 +1,13 @@
+# Sistema Operacional e Logs
 .DS_Store
 Thumbs.db
 *.log
+
+# Documentos de Inteligência, Textos e Relatórios PDF (mantidos apenas localmente)
+*.pdf
+*.md
+*.txt
+INTELIGENCIA_OGG_UMBRELLA.md
+Relatorio_Executivo_Board_Umbrella_Corp.pdf
+Análise dos 4 Ps .pdf
+site/LeiaMe.txt

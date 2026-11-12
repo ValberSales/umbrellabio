@@ -193,6 +193,8 @@ function renderAllCharts() {
   renderChart07CapacityFlow();
   renderChart08RegionalP5();
   renderChart09PromotionHR();
+  renderChart10CompetitorShare();
+  renderChart11CompetitorPosition();
 }
 
 /**
@@ -750,6 +752,129 @@ function renderChart09PromotionHR() {
   `;
 }
 
+/**
+ * Chart 10: Market Share por Região das 8 Corporações no Ciclo 5 (%)
+ */
+function renderChart10CompetitorShare() {
+  const host = document.getElementById("svgStageCompShare");
+  if (!host) return;
+
+  const companies = [
+    { name: "Umbrella", r1: 0.0, r2: 4.8, r3: 15.62, r4: 13.17, highlight: true },
+    { name: "KuraMotor", r1: 67.27, r2: 56.62, r3: 17.14, r4: 8.28, highlight: false },
+    { name: "BIOSAFRA", r1: 16.21, r2: 4.55, r3: 5.5, r4: 23.38, highlight: false },
+    { name: "Galo Elét.", r1: 0.0, r2: 8.8, r3: 11.56, r4: 11.46, highlight: false },
+    { name: "ValeVerde", r1: 16.53, r2: 10.43, r3: 12.63, r4: 3.58, highlight: false },
+    { name: "EcoBoost", r1: 0.0, r2: 0.0, r3: 16.38, r4: 13.83, highlight: false },
+    { name: "KUmbustão", r1: 0.0, r2: 0.0, r3: 12.22, r4: 16.15, highlight: false },
+    { name: "Ipirango", r1: 0.0, r2: 14.8, r3: 8.96, r4: 10.15, highlight: false },
+  ];
+
+  const W = 580;
+  const H = 310;
+  const baseY = 252;
+  const scaleY = 2.85; // 70% = ~200px
+
+  let svg = "";
+  companies.forEach((c, i) => {
+    const gx = 48 + i * 68;
+    const h1 = c.r1 * scaleY;
+    const h2 = c.r2 * scaleY;
+    const h3 = c.r3 * scaleY;
+    const h4 = c.r4 * scaleY;
+
+    if (c.highlight) {
+      svg += `<rect x="${gx - 28}" y="22" width="56" height="${baseY - 18}" rx="6" fill="rgba(225,17,44,0.09)" stroke="rgba(225,17,44,0.35)" stroke-dasharray="3 3"/>`;
+    }
+
+    svg += `
+      <!-- R1 -->
+      <rect class="anim-bar" style="transition-delay:${i * 55}ms" x="${gx - 22}" y="${baseY - h1}" width="10" height="${Math.max(2, h1)}" rx="2" fill="#64748b"/>
+      <!-- R2 -->
+      <rect class="anim-bar" style="transition-delay:${i * 55 + 20}ms" x="${gx - 10}" y="${baseY - h2}" width="10" height="${Math.max(2, h2)}" rx="2" fill="#00e5ff"/>
+      <!-- R3 -->
+      <rect class="anim-bar" style="transition-delay:${i * 55 + 40}ms" x="${gx + 2}" y="${baseY - h3}" width="10" height="${Math.max(2, h3)}" rx="2" fill="#34d399"/>
+      <!-- R4 -->
+      <rect class="anim-bar" style="transition-delay:${i * 55 + 60}ms" x="${gx + 14}" y="${baseY - h4}" width="10" height="${Math.max(2, h4)}" rx="2" fill="#e1112c"/>
+
+      <text x="${gx}" y="${baseY + 18}" text-anchor="middle" fill="${c.highlight ? "#ff2a4b" : "#f8fafc"}" font-size="9.5" font-weight="700" font-family="monospace">${c.name}</text>
+      <text x="${gx}" y="${baseY + 32}" text-anchor="middle" fill="#94a3b8" font-size="8.5" font-family="monospace">R3:${c.r3.toFixed(0)}% R4:${c.r4.toFixed(0)}%</text>
+    `;
+  });
+
+  host.innerHTML = `
+    <svg viewBox="0 0 ${W} ${H}" role="img" aria-label="Market Share por Região das 8 Corporações">
+      <line x1="20" y1="${baseY - 50 * scaleY}" x2="${W - 12}" y2="${baseY - 50 * scaleY}" stroke="rgba(255,255,255,0.07)" stroke-dasharray="4 4"/>
+      <text x="18" y="${baseY - 50 * scaleY + 3}" text-anchor="end" fill="#64748b" font-size="8.5" font-family="monospace">50%</text>
+      <line x1="20" y1="${baseY - 20 * scaleY}" x2="${W - 12}" y2="${baseY - 20 * scaleY}" stroke="rgba(255,255,255,0.07)" stroke-dasharray="4 4"/>
+      <text x="18" y="${baseY - 20 * scaleY + 3}" text-anchor="end" fill="#64748b" font-size="8.5" font-family="monospace">20%</text>
+      <line x1="20" y1="${baseY}" x2="${W - 12}" y2="${baseY}" stroke="rgba(255,255,255,0.22)"/>
+      ${svg}
+    </svg>
+  `;
+}
+
+/**
+ * Chart 11: Preço Médio Praticado (R$/un) vs Capacidade Instalada (Módulos) e Grau de Inovação
+ */
+function renderChart11CompetitorPosition() {
+  const host = document.getElementById("svgStageCompPosition");
+  if (!host) return;
+
+  const rivals = [
+    { name: "Umbrella", avgPrice: 26.83, modules: 2, level: 2 },
+    { name: "Galo Elét.", avgPrice: 25.50, modules: 2, level: 2 },
+    { name: "KuraMotor", avgPrice: 24.00, modules: 4, level: 1 },
+    { name: "BIOSAFRA", avgPrice: 23.75, modules: 2, level: 1 },
+    { name: "Ipirango", avgPrice: 23.50, modules: 1, level: 1 },
+    { name: "KUmbustão", avgPrice: 21.50, modules: 1, level: 1 },
+    { name: "EcoBoost", avgPrice: 21.00, modules: 1, level: 1 },
+    { name: "ValeVerde", avgPrice: 15.77, modules: 3, level: 1 },
+  ];
+
+  const W = 580;
+  const H = 310;
+  const baseY = 252;
+  const scalePrice = 7.4; // R$ 27 = 200px
+  const scaleMod = 42; // 4 modules = 168px
+
+  let svg = "";
+  let modPts = [];
+
+  rivals.forEach((r, i) => {
+    const gx = 48 + i * 68;
+    const hP = r.avgPrice * scalePrice;
+    const barColor = r.level === 2 ? "#e1112c" : "#475569";
+
+    svg += `
+      <rect class="anim-bar" style="transition-delay:${i * 65}ms" x="${gx - 16}" y="${baseY - hP}" width="32" height="${hP}" rx="4" fill="${barColor}"/>
+      <text x="${gx}" y="${baseY - hP - 7}" text-anchor="middle" fill="${r.level === 2 ? "#fda4af" : "#cbd5e1"}" font-size="9.5" font-weight="700" font-family="monospace">R$${r.avgPrice.toFixed(1)}</text>
+      <text x="${gx}" y="${baseY + 18}" text-anchor="middle" fill="${r.name === "Umbrella" ? "#ff2a4b" : "#f8fafc"}" font-size="9.5" font-weight="700" font-family="monospace">${r.name}</text>
+      <text x="${gx}" y="${baseY + 32}" text-anchor="middle" fill="${r.level === 2 ? "#34d399" : "#94a3b8"}" font-size="8.5" font-weight="700" font-family="monospace">Grau ${r.level} • ${r.modules} Us.</text>
+    `;
+
+    modPts.push({ x: gx, y: baseY - r.modules * scaleMod, mod: r.modules });
+  });
+
+  const pathD = modPts.map((pt, i) => `${i === 0 ? "M" : "L"}${pt.x},${pt.y}`).join(" ");
+  const ptsSvg = modPts
+    .map(
+      (pt) => `
+      <circle class="anim-node" cx="${pt.x}" cy="${pt.y}" r="5" fill="#f59e0b" stroke="#000" stroke-width="2"/>
+    `
+    )
+    .join("");
+
+  host.innerHTML = `
+    <svg viewBox="0 0 ${W} ${H}" role="img" aria-label="Preço Médio vs Capacidade e Grau de Inovação">
+      <line x1="20" y1="${baseY}" x2="${W - 12}" y2="${baseY}" stroke="rgba(255,255,255,0.22)"/>
+      ${svg}
+      <path class="anim-line" d="${pathD}" fill="none" stroke="#f59e0b" stroke-width="2.5" stroke-dasharray="4 2"/>
+      ${ptsSvg}
+    </svg>
+  `;
+}
+
 /* =========================================================================
    5. INTERACTIVE PERIOD 6 RED QUEEN PRODUCTION & COST SIMULATOR
    ========================================================================= */
@@ -874,10 +999,10 @@ function initP6Simulator() {
   if (presetScale) {
     presetScale.addEventListener("click", () => {
       setActivePreset(presetScale);
-      slSales.value = 1650000;
-      slSafety.value = 350000;
+      slSales.value = 1750000;
+      slSafety.value = 250000;
       slProd.value = 90.5;
-      slPrice.value = 28.0;
+      slPrice.value = 26.0;
       recalculate();
     });
   }
