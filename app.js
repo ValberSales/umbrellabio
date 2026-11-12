@@ -904,7 +904,7 @@ function initP6Simulator() {
 
   const INITIAL_PA_STOCK = 379842; // Estoque final P5
   const NOMINAL_CAP_P6 = 1800000; // 2 módulos operacionais ativos em P6
-  const FIXED_COST_P6 = 1500000; // R$ 1,50 milhão para 2 usinas
+  const FIXED_COST_P6 = 2000000; // R$ 2,00 milhões para 2 usinas no P6
   const MP1_STOCK_P5 = 4171500;
   const MP2_STOCK_P5 = 4001500;
   const MP3_STOCK_P5 = 2085750;
@@ -924,7 +924,7 @@ function initP6Simulator() {
     valProd.textContent = `${prodPct.toFixed(1).replace(".", ",")}%`;
     valPrice.textContent = `R$ ${price.toFixed(2).replace(".", ",")}`;
 
-    // Fórmula do documento: Produção = Venda Esperada + Estoque de Segurança - Estoque Atual (379.842)
+    // Produção = Venda Esperada + Estoque de Segurança - Estoque Atual (379.842)
     const maxRealCapacity = Math.round(NOMINAL_CAP_P6 * (prodPct / 100));
     const rawRequiredProd = Math.max(0, sales + safety - INITIAL_PA_STOCK);
     const effectiveProd = Math.min(rawRequiredProd, maxRealCapacity);
@@ -943,11 +943,11 @@ function initP6Simulator() {
     // Custo fixo unitário diluído
     const fixedPerUnit = effectiveProd > 0 ? FIXED_COST_P6 / effectiveProd : 0;
     outFixedUnit.textContent = `R$ ${fixedPerUnit.toFixed(2).replace(".", ",")} / un`;
-    if (fixedPerUnit <= 1.0) {
-      outFixedCompare.textContent = `Diluído com sucesso! (Retorna ao patamar de R$ 0,93/un de P4)`;
+    if (fixedPerUnit <= 1.25) {
+      outFixedCompare.textContent = `Diluído com sucesso! (-40% vs. os R$ 1,85/un do P5 com 2 usinas ativas)`;
       outFixedCompare.style.color = "#34d399";
     } else {
-      outFixedCompare.textContent = `Em P5 foi R$ 1,85/un (aumente produção p/ aproximar de R$ 0,93/un)`;
+      outFixedCompare.textContent = `Em P5 foi R$ 1,85/un (aumente produção p/ diluir o custo fixo)`;
       outFixedCompare.style.color = "#fcd34d";
     }
 
@@ -958,22 +958,24 @@ function initP6Simulator() {
     outMpConsumption.textContent = `${(reqMp1 / 1e6).toFixed(2).replace(".", ",")}M / ${(reqMp2 / 1e6).toFixed(2).replace(".", ",")}M / ${(reqMp3 / 1e6).toFixed(2).replace(".", ",")}M`;
 
     if (reqMp1 <= MP1_STOCK_P5 && reqMp2 <= MP2_STOCK_P5 && reqMp3 <= MP3_STOCK_P5) {
-      outMpStatus.textContent = `100% coberto pelo estoque inicial do P6 (sobra ${( (MP1_STOCK_P5 - reqMp1) / 1e6 ).toFixed(2).replace(".", ",")}M MP1)`;
+      outMpStatus.textContent = `100% coberto pelo estoque inicial do P6 (sobra ${((MP1_STOCK_P5 - reqMp1) / 1e6).toFixed(2).replace(".", ",")}M MP1 + lote P7)`;
       outMpStatus.style.color = "#34d399";
     } else {
       outMpStatus.textContent = `Atenção: Excede o estoque inicial disponível!`;
       outMpStatus.style.color = "#fda4af";
     }
 
-    // Receita e Lucro Bruto estimado (MP ~R$ 2,79/un + Imposto 12,5% + Comissão 5% = 17,5% da receita)
+    // Receita e Lucro Bruto / Líquido estimado (Alinhado à Previsão Oficial P6: R$ 61,22M Receita, R$ 39,03M Lucro Bruto, R$ 22,75M Lucro Líquido)
     const actualSold = Math.min(sales, effectiveProd + INITIAL_PA_STOCK);
     const revenue = actualSold * price;
-    const cpvTotal = actualSold * 2.79 + revenue * 0.175;
+    // Em P6: CPV unitário médio (MP + Embalagem Premium + Imposto 12,5% + Comissão 5%) representa ~36,25% da receita a R$ 29,43
+    const cpvTotal = actualSold * 5.52 + revenue * 0.175;
     const grossProfit = revenue - cpvTotal;
     const grossMarginPct = revenue > 0 ? (grossProfit / revenue) * 100 : 0;
+    const netProfit = Math.max(0, (grossProfit - 12264567) * 0.85);
 
     outRevProfit.textContent = `R$ ${(revenue / 1e6).toFixed(2).replace(".", ",")} mi`;
-    outGrossMargin.textContent = `Lucro Bruto: R$ ${(grossProfit / 1e6).toFixed(2).replace(".", ",")} mi (Margem Bruta ${grossMarginPct.toFixed(1).replace(".", ",")}%)`;
+    outGrossMargin.textContent = `Lucro Bruto: R$ ${(grossProfit / 1e6).toFixed(2).replace(".", ",")} mi (${grossMarginPct.toFixed(1).replace(".", ",")}%) • Lucro Líq.: R$ ${(netProfit / 1e6).toFixed(2).replace(".", ",")} mi`;
   }
 
   [slSales, slSafety, slProd, slPrice].forEach((el) => {
@@ -985,13 +987,13 @@ function initP6Simulator() {
     if (btn) btn.classList.add("active");
   }
 
-  if (presetDoc) {
-    presetDoc.addEventListener("click", () => {
-      setActivePreset(presetDoc);
-      slSales.value = 1100000;
-      slSafety.value = 350000;
-      slProd.value = 90.5;
-      slPrice.value = 28.5;
+  if (presetOggP6) {
+    presetOggP6.addEventListener("click", () => {
+      setActivePreset(presetOggP6);
+      slSales.value = 2079842;
+      slSafety.value = 100000;
+      slProd.value = 100.0;
+      slPrice.value = 29.43;
       recalculate();
     });
   }
@@ -1000,20 +1002,20 @@ function initP6Simulator() {
     presetScale.addEventListener("click", () => {
       setActivePreset(presetScale);
       slSales.value = 1750000;
-      slSafety.value = 250000;
-      slProd.value = 90.5;
-      slPrice.value = 26.0;
+      slSafety.value = 200000;
+      slProd.value = 91.0;
+      slPrice.value = 28.0;
       recalculate();
     });
   }
 
-  if (presetOggP6) {
-    presetOggP6.addEventListener("click", () => {
-      setActivePreset(presetOggP6);
-      slSales.value = 2000000;
+  if (presetDoc) {
+    presetDoc.addEventListener("click", () => {
+      setActivePreset(presetDoc);
+      slSales.value = 1400000;
       slSafety.value = 200000;
-      slProd.value = 91.5;
-      slPrice.value = 29.5;
+      slProd.value = 90.5;
+      slPrice.value = 27.5;
       recalculate();
     });
   }
