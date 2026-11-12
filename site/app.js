@@ -944,10 +944,10 @@ function initP6Simulator() {
     const fixedPerUnit = effectiveProd > 0 ? FIXED_COST_P6 / effectiveProd : 0;
     outFixedUnit.textContent = `R$ ${fixedPerUnit.toFixed(2).replace(".", ",")} / un`;
     if (fixedPerUnit <= 1.25) {
-      outFixedCompare.textContent = `Diluído com sucesso! (-40% vs. os R$ 1,85/un do P5 com 2 usinas ativas)`;
+      outFixedCompare.textContent = `Redução de 40% frente aos R$ 1,85/un do P5 com 2 usinas ativas`;
       outFixedCompare.style.color = "#34d399";
     } else {
-      outFixedCompare.textContent = `Em P5 foi R$ 1,85/un (aumente produção p/ diluir o custo fixo)`;
+      outFixedCompare.textContent = `No P5 foi R$ 1,85/un (eleve a produção para diluir o custo fixo)`;
       outFixedCompare.style.color = "#fcd34d";
     }
 
@@ -958,10 +958,10 @@ function initP6Simulator() {
     outMpConsumption.textContent = `${(reqMp1 / 1e6).toFixed(2).replace(".", ",")}M / ${(reqMp2 / 1e6).toFixed(2).replace(".", ",")}M / ${(reqMp3 / 1e6).toFixed(2).replace(".", ",")}M`;
 
     if (reqMp1 <= MP1_STOCK_P5 && reqMp2 <= MP2_STOCK_P5 && reqMp3 <= MP3_STOCK_P5) {
-      outMpStatus.textContent = `100% coberto pelo estoque inicial do P6 (sobra ${((MP1_STOCK_P5 - reqMp1) / 1e6).toFixed(2).replace(".", ",")}M MP1 + lote P7)`;
+      outMpStatus.textContent = `Coberto pelo estoque inicial do P6 (saldo: ${((MP1_STOCK_P5 - reqMp1) / 1e6).toFixed(2).replace(".", ",")}M MP1 + lote P7)`;
       outMpStatus.style.color = "#34d399";
     } else {
-      outMpStatus.textContent = `Atenção: Excede o estoque inicial disponível!`;
+      outMpStatus.textContent = `Alerta: volume excede o estoque inicial disponível nos silos`;
       outMpStatus.style.color = "#fda4af";
     }
 
